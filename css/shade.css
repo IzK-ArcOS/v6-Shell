@@ -1,0 +1,11 @@
+#ArcShell button.shade {
+  display: none;
+  border: none;
+  padding: 0;
+  cursor: default;
+  background-color: transparent;
+}
+
+#ArcShell button.shade.present {
+  display: block;
+}

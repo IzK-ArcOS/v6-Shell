@@ -1,3 +1,5 @@
-window#appTemplate { /* Rename appTemplate to the ID of the app */
-  color: #f0f;
+@import url("./shade.css");
+
+#ArcShell {
+  background-color: transparent;
 }
