@@ -1,19 +1,21 @@
-import { DefaultIcon } from "$ts/images/apps";
-import { Runtime } from "./runtime";
-import AppSvelte from "../App.svelte";
+import { Logo } from "$ts/branding";
+import { ArcOSVersion } from "$ts/env";
 import { App } from "$types/app";
+import AppSvelte from "../App.svelte";
+import { ShellRuntime } from "./runtime";
 
-export const app: App = {
+export const ArcShell: App = {
   metadata: {
-    name: "App Template",
-    description: "This is an app template",
+    name: "ArcShell",
+    description: "The ArcOS Shell",
     author: "The ArcOS Team",
-    version: "0.0.0",
-    icon: DefaultIcon
+    version: ArcOSVersion,
+    icon: Logo(),
+    core: true
   },
-  runtime: Runtime,
+  runtime: ShellRuntime,
   content: AppSvelte,
-  id: "appTemplate",
+  id: "ArcShell",
   size: { w: 0, h: 0 },
   minSize: { w: 0, h: 0 },
   maxSize: { w: 0, h: 0 },
