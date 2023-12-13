@@ -1,0 +1,7 @@
+#ArcShell div.startmenu div.rightpane {
+  width: 150px;
+  height: 100%;
+  border-radius: 5px;
+  border: var(--win-border-light);
+  background-color: var(--darkened-overlay);
+}

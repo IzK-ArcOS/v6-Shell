@@ -1,5 +1,9 @@
 @import url("./startmenu/position.css");
 @import url("./startmenu/close.css");
+@import url("./startmenu/leftpane.css");
+@import url("./startmenu/rightpane.css");
+@import url("./startmenu/toppane.css");
+@import url("./startmenu/bottompane.css");
 
 #ArcShell div.startmenu {
   --closed-transform: 40px;
@@ -16,6 +20,10 @@
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 #ArcShell div.shell div.startmenu.opened {

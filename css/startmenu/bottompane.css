@@ -1,0 +1,7 @@
+#ArcShell div.startmenu div.bottompane {
+  height: 50px;
+  background-color: var(--darkened-overlay);
+  border-radius: 5px;
+  border: var(--win-border-light);
+  align-items: center;
+}

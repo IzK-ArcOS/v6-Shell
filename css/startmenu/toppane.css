@@ -1,0 +1,6 @@
+#ArcShell div.startmenu div.top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: calc(100% - 50px)
+}
