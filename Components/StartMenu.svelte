@@ -8,7 +8,7 @@
 
 {#if $UserDataStore}
   <div
-    class="start-menu"
+    class="startmenu"
     class:small={$UserDataStore.sh.start.small}
     class:opened={$StartMenuOpened}
   >

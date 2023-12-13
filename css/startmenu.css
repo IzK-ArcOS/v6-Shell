@@ -1,0 +1,29 @@
+#ArcShell div.startmenu {
+  width: 420px;
+  height: 490px;
+  background-color: #f0f;
+  margin: var(--docking-margin);
+}
+
+#ArcShell div.tb- div.startmenu {
+  margin-top: auto;
+}
+
+#ArcShell div.tb-top div.startmenu {
+  margin-top: 0;
+  margin-bottom: auto;
+}
+
+#ArcShell div.tb- div.startmenu {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+#ArcShell div.tb-vertical div.startmenu {
+  margin-left: 0px;
+}
+
+
+#ArcShell div.tb-vertical-right div.startmenu {
+  margin-right: 0px;
+}

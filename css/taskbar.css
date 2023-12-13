@@ -1,0 +1,6 @@
+#ArcShell div.taskbar {
+  width: calc(100% - var(--docking-margin) * 2);
+  height: calc(100% - var(--docking-margin) * 2);
+  background-color: #0ff;
+  margin: var(--docking-margin)
+}

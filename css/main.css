@@ -1,5 +1,65 @@
 @import url("./shade.css");
+@import url("./startmenu.css");
+@import url("./actioncenter.css");
+@import url("./taskbar.css");
 
 #ArcShell {
   background-color: transparent;
+}
+
+#ArcShell div.shell {
+  --direction: column;
+  --primary-direction: row;
+  --size-secondary: 65px;
+  --docking-margin: 10px;
+  display: flex;
+  flex-direction: var(--direction);
+  gap: 0px;
+  height: 100%;
+}
+
+#ArcShell div.shell div.primary {
+  display: flex;
+  flex-direction: var(--primary-direction);
+  height: calc(100% - var(--size-secondary));
+  width: 100%;
+  justify-content: space-between;
+}
+
+#ArcShell div.shell div.secondary {
+  width: 100%;
+  height: var(--size-secondary);
+}
+
+#ArcShell div.shell.vertical div.secondary {
+  width: var(--size-secondary);
+  height: 100%;
+}
+
+#ArcShell div.shell.vertical div.primary {
+  height: 100%;
+  width: calc(100% - var(--size-secondary));
+}
+
+#ArcShell div.shell.tb-vertical {
+  --direction: row-reverse;
+  --primary-direction: row;
+}
+
+#ArcShell div.shell.tb-vertical-right {
+  --direction: row;
+  --primary-direction: row-reverse;
+}
+
+#ArcShell div.shell.tb- {
+  --direction: column;
+}
+
+#ArcShell div.shell.tb-top {
+  --direction: column-reverse;
+}
+
+#ArcShell div.shell.docked {
+  --docking-margin: 0px;
+  --size-secondary: 45px;
 }
