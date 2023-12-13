@@ -1,0 +1,13 @@
+#ArcShell div.shell:not(.vertical) div.startmenu {
+  transform: translateY(var(--closed-transform))
+}
+
+#ArcShell div.shell.vertical div.startmenu {
+  transform: translateX(var(--closed-transform))
+}
+
+#ArcShell div.tb-top div.startmenu,
+#ArcShell div.tb-vertical div.startmenu {
+  --closed-transform: -40px;
+
+}

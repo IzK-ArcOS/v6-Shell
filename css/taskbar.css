@@ -1,6 +1,18 @@
+@import url("./taskbar/docked.css");
+@import url("./taskbar/startbutton.css");
+
 #ArcShell div.taskbar {
-  width: calc(100% - var(--docking-margin) * 2);
-  height: calc(100% - var(--docking-margin) * 2);
-  background-color: #0ff;
-  margin: var(--docking-margin)
+  width: var(--maximized-size);
+  height: var(--maximized-size);
+  margin: var(--docking-margin);
+  padding: 4px;
+  border-radius: var(--win-border-rad);
+  box-sizing: border-box;
+  background-color: var(--startmenu-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
+  border: var(--glass-alt-bg) 1px solid;
+  display: flex;
+  overflow: hidden;
+  pointer-events: initial;
 }

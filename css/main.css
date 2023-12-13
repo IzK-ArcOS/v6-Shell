@@ -5,6 +5,16 @@
 
 #ArcShell {
   background-color: transparent;
+  z-index: 100000000000000;
+  pointer-events: none;
+}
+
+#ArcShell div.body {
+  pointer-events: none;
+}
+
+#ArcShell * {
+  transition: all 0.3s, color 0.1s, pointer-events 0s;
 }
 
 #ArcShell div.shell {
@@ -12,10 +22,13 @@
   --primary-direction: row;
   --size-secondary: 65px;
   --docking-margin: 10px;
+  --maximized-size: calc(100% - var(--docking-margin) * 2);
   display: flex;
   flex-direction: var(--direction);
   gap: 0px;
   height: 100%;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 #ArcShell div.shell div.primary {
@@ -24,11 +37,16 @@
   height: calc(100% - var(--size-secondary));
   width: 100%;
   justify-content: space-between;
+  pointer-events: none;
+  z-index: 1;
 }
 
 #ArcShell div.shell div.secondary {
   width: 100%;
   height: var(--size-secondary);
+  pointer-events: none;
+  z-index: 2;
+
 }
 
 #ArcShell div.shell.vertical div.secondary {

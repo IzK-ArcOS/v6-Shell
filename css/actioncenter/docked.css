@@ -1,0 +1,19 @@
+#ArcShell div.shell.docked div.actioncenter {
+  border: none;
+  border-radius: 0;
+}
+
+#ArcShell div.shell.docked.tb- div.actioncenter,
+#ArcShell div.shell.docked.tb-top div.actioncenter,
+#ArcShell div.shell.docked.tb-vertical div.actioncenter {
+  border-left: var(--glass-alt-bg) 1px solid;
+}
+
+#ArcShell div.shell.docked.tb-vertical-right div.actioncenter {
+  border-right: var(--glass-alt-bg) 1px solid;
+}
+
+/* 
+#ArcShell div.shell.docked.tb-top div.actioncenter {
+  border-bottom: var(--glass-alt-bg) 1px solid;
+} */

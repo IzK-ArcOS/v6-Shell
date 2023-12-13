@@ -1,29 +1,25 @@
+@import url("./startmenu/position.css");
+@import url("./startmenu/close.css");
+
 #ArcShell div.startmenu {
+  --closed-transform: 40px;
+  --docking-margin: 10px;
   width: 420px;
   height: 490px;
-  background-color: #f0f;
   margin: var(--docking-margin);
+  border: var(--glass-alt-bg) 1px solid;
+  border-radius: var(--win-border-rad);
+  background-color: var(--startmenu-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
+  box-shadow: 0px 5px 15px 5px #0003;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
 }
 
-#ArcShell div.tb- div.startmenu {
-  margin-top: auto;
-}
-
-#ArcShell div.tb-top div.startmenu {
-  margin-top: 0;
-  margin-bottom: auto;
-}
-
-#ArcShell div.tb- div.startmenu {
-  margin-top: auto;
-  margin-bottom: 0;
-}
-
-#ArcShell div.tb-vertical div.startmenu {
-  margin-left: 0px;
-}
-
-
-#ArcShell div.tb-vertical-right div.startmenu {
-  margin-right: 0px;
+#ArcShell div.shell div.startmenu.opened {
+  transform: unset;
+  opacity: 1;
+  pointer-events: initial;
 }

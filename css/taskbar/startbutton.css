@@ -1,0 +1,37 @@
+#ArcShell div.taskbar button.start-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  color: var(--fg);
+  transition: opacity 0.3s, background-color 0.2s;
+}
+
+#ArcShell div.taskbar button.start-button.activated::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent);
+  opacity: 0.3;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+#ArcShell div.taskbar button.start-button:not(.open) svg.accented-logo path {
+  --accent: #fff5;
+}
+
+#ArcShell div.taskbar button.start-button img {
+  height: 25px;
+  width: 25px;
+}

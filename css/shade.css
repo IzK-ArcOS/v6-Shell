@@ -4,6 +4,7 @@
   padding: 0;
   cursor: default;
   background-color: transparent;
+  pointer-events: initial;
 }
 
 #ArcShell button.shade.present {

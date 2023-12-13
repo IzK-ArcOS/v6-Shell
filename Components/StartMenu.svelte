@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { maxZIndex } from "$ts/stores/apps";
   import { UserDataStore } from "$ts/stores/user";
   import { StartMenuOpened } from "../ts/stores";
   import Bottom from "./StartMenu/Bottom.svelte";
@@ -11,6 +12,7 @@
     class="startmenu"
     class:small={$UserDataStore.sh.start.small}
     class:opened={$StartMenuOpened}
+    style="z-index: {$maxZIndex + 4};"
   >
     <div class="top">
       <LeftPane />

@@ -1,17 +1,31 @@
+@import url("./actioncenter/docked.css");
+@import url("./actioncenter/position.css");
+
 div.actioncenter {
+  --closed-transform: 100px;
   height: 100%;
   width: 400px;
   margin: var(--docking-margin);
-  background-color: #ff0;
-  height: calc(100% - var(--docking-margin))
+  background-color: var(--startmenu-bg);
+  border: var(--glass-alt-bg) 1px solid;
+  height: calc(100% - var(--docking-margin));
+  padding: 20px;
+  padding-right: 15px;
+  overflow: hidden;
+  backdrop-filter: blur(var(--glass-blur));
+  border-radius: var(--win-border-rad);
+  transform: translateX(var(--closed-transform));
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
 }
 
-#ArcShell div.tb-top div.actioncenter {
-  margin-top: 0;
-  margin-bottom: var(--docking-margin);
+div.actioncenter.opened {
+  transform: unset;
+  opacity: 1;
+  pointer-events: initial;
 }
 
-#ArcShell div.tb- div.actioncenter {
-  margin-top: var(--docking-margin);
-  margin-bottom: 0;
+#ArcShell div.shell.vertical div.actioncenter {
+  height: var(--maximized-size)
 }

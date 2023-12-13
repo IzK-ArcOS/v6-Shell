@@ -1,0 +1,30 @@
+#ArcShell div.tb- div.startmenu {
+  margin-top: auto;
+}
+
+#ArcShell div.tb-top div.startmenu {
+  margin-top: 0;
+  margin-bottom: auto;
+}
+
+#ArcShell div.tb- div.startmenu {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+#ArcShell div.tb-vertical:not(.docked) div.startmenu {
+  margin-left: 0px;
+}
+
+#ArcShell div.tb-vertical-right:not(.docked) div.startmenu {
+  margin-right: 0px;
+}
+
+
+#ArcShell div.tb-.docked div.startmenu {
+  margin-bottom: var(--docking-margin)
+}
+
+#ArcShell div.tb-top.docked div.startmenu {
+  margin-top: var(--docking-margin)
+}

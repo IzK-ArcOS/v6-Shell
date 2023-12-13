@@ -1,0 +1,21 @@
+#ArcShell div.shell.docked div.taskbar {
+  border: none;
+  border-radius: 0;
+  padding: 5px;
+}
+
+#ArcShell div.shell.docked.tb-vertical div.taskbar {
+  border-right: var(--glass-alt-bg) 1px solid;
+}
+
+#ArcShell div.shell.docked.tb-vertical-right div.taskbar {
+  border-left: var(--glass-alt-bg) 1px solid;
+}
+
+#ArcShell div.shell.docked.tb- div.taskbar {
+  border-top: var(--glass-alt-bg) 1px solid;
+}
+
+#ArcShell div.shell.docked.tb-top div.taskbar {
+  border-bottom: var(--glass-alt-bg) 1px solid;
+}
