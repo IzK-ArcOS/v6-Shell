@@ -1,0 +1,55 @@
+#ArcShell div.startmenu div.leftpane div.group {
+  margin-bottom: 5px;
+  overflow: hidden;
+  height: 30px;
+}
+
+#ArcShell div.startmenu div.leftpane div.group.expand {
+  height: fit-content;
+}
+
+#ArcShell div.startmenu div.leftpane div.group button.item {
+  margin-left: 15px;
+  width: calc(100% - 15px);
+}
+
+#ArcShell div.startmenu div.leftpane div.group button.item img {
+  height: 20px !important;
+}
+
+#ArcShell div.startmenu div.leftpane div.group button.expander {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border: none;
+  gap: 14px;
+  border-radius: var(--win-border-rad);
+  background-color: transparent;
+  color: var(--fg);
+  margin-bottom: 5px;
+  padding-right: 0;
+  box-shadow: none;
+}
+
+#ArcShell div.startmenu div.leftpane div.group button.expander::after {
+  content: "chevron_right";
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  font-family: "Material Icons Round";
+  font-size: 20px;
+}
+
+#ArcShell div.startmenu div.leftpane div.group button.expander:hover {
+  background-color: var(--button-glass-bg);
+}
+
+#ArcShell div.startmenu div.leftpane div.group.expand button.expander::after {
+  transform: rotate(90deg);
+}
+
+#ArcShell div.startmenu div.leftpane div.group button.expander img {
+  height: 20px;
+}

@@ -1,4 +1,42 @@
+@import url("./leftpane/groups.css");
+
 #ArcShell div.startmenu div.leftpane {
-  width: calc(100% - 150px);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: calc(100% - 160px);
   height: 100%;
+  padding: 15px;
+}
+
+#ArcShell div.startmenu button.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  border-radius: var(--win-border-rad);
+  text-align: left;
+  background-color: var(--startmenu-applist-item-bg);
+  color: var(--fg);
+  padding: 5px;
+  padding-right: 0;
+  box-shadow: none;
+  border: none;
+}
+
+#ArcShell div.startmenu button.item img {
+  height: 24px;
+}
+
+#ArcShell div.startmenu button.item:hover {
+  background-color: var(--button-glass-bg);
+}
+
+#ArcShell div.startmenu button.item:active {
+  background-color: var(--startmenu-applist-item-bg-active);
+}
+
+#ArcShell div.startmenu button.item:disabled {
+  opacity: 0.5;
+  filter: grayscale(100%);
 }
