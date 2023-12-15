@@ -34,9 +34,7 @@
     {/each}
   {:else}
     {#each Object.entries($appLibrary) as [_, window]}
-      {#if isPopulatable(window)}
-        <AppListItem app={window} />
-      {/if}
+      <AppListItem app={window} />
     {/each}
   {/if}
 </div>
