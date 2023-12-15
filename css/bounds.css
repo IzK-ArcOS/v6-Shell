@@ -1,0 +1,30 @@
+.taskbar-bounds {
+  --direction: column;
+  --primary-direction: row;
+  --size-secondary: 65px;
+  --docking-margin: 10px;
+  --maximized-size: calc(100% - var(--docking-margin) * 2);
+}
+
+.taskbar-bounds.vertical {
+  --direction: row-reverse;
+  --primary-direction: row;
+}
+
+.taskbar-bounds.tb-vertical-right {
+  --direction: row;
+  --primary-direction: row-reverse;
+}
+
+.taskbar-bounds.tb- {
+  --direction: column;
+}
+
+.taskbar-bounds.tb-top {
+  --direction: column-reverse;
+}
+
+.taskbar-bounds.docked {
+  --docking-margin: 0px;
+  --size-secondary: 45px;
+}

@@ -1,6 +1,8 @@
 @import url("./taskbar/docked.css");
+@import url("./taskbar/vertical.css");
 @import url("./taskbar/startbutton.css");
 @import url("./taskbar/openedapps.css");
+@import url("./taskbar/systemarea.css");
 
 #ArcShell div.taskbar {
   width: var(--maximized-size);

@@ -2,6 +2,7 @@
 @import url("./startmenu.css");
 @import url("./actioncenter.css");
 @import url("./taskbar.css");
+@import url("./bounds.css");
 
 #ArcShell {
   background-color: transparent;
@@ -18,11 +19,6 @@
 }
 
 #ArcShell div.shell {
-  --direction: column;
-  --primary-direction: row;
-  --size-secondary: 65px;
-  --docking-margin: 10px;
-  --maximized-size: calc(100% - var(--docking-margin) * 2);
   display: flex;
   flex-direction: var(--direction);
   gap: 0px;
@@ -57,27 +53,4 @@
 #ArcShell div.shell.vertical div.primary {
   height: 100%;
   width: calc(100% - var(--size-secondary));
-}
-
-#ArcShell div.shell.tb-vertical {
-  --direction: row-reverse;
-  --primary-direction: row;
-}
-
-#ArcShell div.shell.tb-vertical-right {
-  --direction: row;
-  --primary-direction: row-reverse;
-}
-
-#ArcShell div.shell.tb- {
-  --direction: column;
-}
-
-#ArcShell div.shell.tb-top {
-  --direction: column-reverse;
-}
-
-#ArcShell div.shell.docked {
-  --docking-margin: 0px;
-  --size-secondary: 45px;
 }
