@@ -1,5 +1,6 @@
 @import url("./taskbar/docked.css");
 @import url("./taskbar/startbutton.css");
+@import url("./taskbar/openedapps.css");
 
 #ArcShell div.taskbar {
   width: var(--maximized-size);
@@ -13,6 +14,6 @@
   backdrop-filter: blur(var(--glass-blur));
   border: var(--glass-alt-bg) 1px solid;
   display: flex;
-  overflow: hidden;
+  /* overflow: hidden; */
   pointer-events: initial;
 }

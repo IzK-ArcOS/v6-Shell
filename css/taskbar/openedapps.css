@@ -1,0 +1,31 @@
+#ArcShell div.taskbar div.opened-apps {
+  display: flex;
+  gap: 10px;
+  padding: 0 10px;
+  height: 35px;
+}
+
+#ArcShell div.taskbar div.opened-apps button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  color: var(--fg)
+}
+
+#ArcShell div.taskbar div.opened-apps button:hover {
+  background-color: var(--button-glass-bg);
+}
+
+#ArcShell div.taskbar div.opened-apps button.activated {
+  background-color: var(--button-glass-hover-bg);
+}
+
+#ArcShell div.taskbar div.opened-apps button:active {
+  background-color: var(--button-glass-active-bg);
+}

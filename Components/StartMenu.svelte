@@ -1,10 +1,14 @@
 <script lang="ts">
-  import { maxZIndex } from "$ts/stores/apps";
+  import { maxZIndex, processes } from "$ts/stores/apps";
   import { UserDataStore } from "$ts/stores/user";
   import { StartMenuOpened } from "../ts/stores";
   import Bottom from "./StartMenu/Bottom.svelte";
   import LeftPane from "./StartMenu/LeftPane.svelte";
   import RightPane from "./StartMenu/RightPane.svelte";
+
+  processes.subscribe(() => {
+    $StartMenuOpened = false;
+  });
 </script>
 
 {#if $UserDataStore}
