@@ -29,3 +29,7 @@
 #ArcShell div.taskbar div.opened-apps button:active {
   background-color: var(--button-glass-active-bg);
 }
+
+#ArcShell div.taskbar div.opened-apps button img {
+  height: 24px;
+}
