@@ -1,0 +1,47 @@
+#ArcShell div.taskbar div.system-area div.tray {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: calc(40px * 4 - 5px);
+  overflow: hidden;
+}
+
+#ArcShell div.taskbar div.system-area div.tray.opened {
+  width: fit-content;
+}
+
+#ArcShell div.taskbar div.system-area div.tray button {
+  margin: 0;
+  padding: 0;
+  width: 35px;
+  min-width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+#ArcShell div.taskbar div.system-area div.tray button:hover {
+  background-color: var(--button-glass-hover-bg);
+}
+
+#ArcShell div.taskbar div.system-area div.tray button:active {
+  background-color: var(--button-glass-active-bg);
+}
+
+#ArcShell div.taskbar div.system-area div.tray button.toggle {
+  font-size: 24px;
+  color: var(--fg);
+  transition: background-color 0.3s, color 0.1s;
+}
+
+#ArcShell div.taskbar div.system-area div.tray.opened button.toggle {
+  transform: rotate(180deg);
+}
+
+#ArcShell div.taskbar div.system-area div.tray button img {
+  height: 20px;
+}

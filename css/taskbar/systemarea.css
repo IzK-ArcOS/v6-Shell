@@ -1,3 +1,5 @@
+@import url("./systemarea/tray.css");
+
 #ArcShell div.taskbar div.system-area {
   margin-left: auto;
   display: flex;
@@ -31,10 +33,4 @@
 #ArcShell div.taskbar div.system-area button.action-center.activated {
   background-color: var(--accent);
   color: var(--accent-darkest)
-}
-
-#ArcShell div.taskbar div.system-area div.tray {
-  display: flex;
-  align-items: center;
-  gap: 15px;
 }
