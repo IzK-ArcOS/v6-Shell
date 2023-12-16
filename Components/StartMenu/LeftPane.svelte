@@ -12,7 +12,8 @@
   let groups = Store<CompiledAppGroupStore>({});
   let rest: string[] = [];
 
-  appLibrary.subscribe(async () => {
+  appLibrary.subscribe(async (v) => {
+    console.log(`AppLibrary change!`, v);
     $groups = {};
 
     await sleep(0);
@@ -33,7 +34,7 @@
       <AppListItem app={getAppById(id)} />
     {/each}
   {:else}
-    {#each Object.entries($appLibrary) as [_, window]}
+    {#each [...$appLibrary] as [_, window]}
       <AppListItem app={window} />
     {/each}
   {/if}
