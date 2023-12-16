@@ -11,7 +11,12 @@
   }
 </script>
 
-<button class="opened-app" on:click={show} class:activated={$focusedPid == pid}>
+<button
+  class="opened-app"
+  on:click={show}
+  class:activated={$focusedPid == pid}
+  class:labels={$UserDataStore.sh.taskbar.labels}
+>
   <img src={proc.metadata.icon} alt={proc.id} />
   {#if $UserDataStore.sh.taskbar.labels}
     <span>{proc.metadata.name}</span>

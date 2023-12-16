@@ -9,13 +9,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   width: 35px;
   height: 35px;
   border-radius: 5px;
   border: none;
   padding: 0;
+  color: var(--fg);
   background-color: transparent;
-  color: var(--fg)
+  font-size: 13px;
 }
 
 #ArcShell div.taskbar div.opened-apps button:hover {
@@ -32,4 +34,9 @@
 
 #ArcShell div.taskbar div.opened-apps button img {
   height: 24px;
+}
+
+#ArcShell div.taskbar div.opened-apps button.labels {
+  width: fit-content;
+  padding: 0 10px;
 }
