@@ -1,12 +1,13 @@
 <script lang="ts">
-  import { spawnProcess } from "$ts/apps/process";
+  import { spawnApp } from "$ts/apps/spawn";
   import { isPopulatable } from "$ts/apps/utils";
+  import { ProcessStack } from "$ts/stores/process";
   import { App } from "$types/app";
 
   export let app: App;
 
   function open() {
-    spawnProcess(app.id);
+    spawnApp(app.id);
   }
 </script>
 

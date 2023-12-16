@@ -4,7 +4,7 @@
   import { App } from "$types/app";
 
   export let pid: number;
-  export let proc: App;
+  export let app: App;
 
   function show() {
     $focusedPid = pid;
@@ -17,8 +17,8 @@
   class:activated={$focusedPid == pid}
   class:labels={$UserDataStore.sh.taskbar.labels}
 >
-  <img src={proc.metadata.icon} alt={proc.id} />
+  <img src={app.metadata.icon} alt={app.id} />
   {#if $UserDataStore.sh.taskbar.labels}
-    <span>{proc.metadata.name}</span>
+    <span>{app.metadata.name}</span>
   {/if}
 </button>

@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { maxZIndex, processes } from "$ts/stores/apps";
+  import { maxZIndex } from "$ts/stores/apps";
+  import { ProcessStack } from "$ts/stores/process";
   import { UserDataStore } from "$ts/stores/user";
   import { ActionCenterOpened, StartMenuOpened } from "../ts/stores";
   import Bottom from "./StartMenu/Bottom.svelte";
@@ -10,7 +11,7 @@
     $StartMenuOpened = false;
   }
 
-  processes.subscribe(close);
+  ProcessStack.processes.subscribe(close);
   ActionCenterOpened.subscribe((v) => v && close());
 </script>
 

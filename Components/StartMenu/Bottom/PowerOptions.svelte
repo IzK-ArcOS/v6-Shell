@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { spawnProcess } from "$ts/apps/process";
+  import { spawnApp } from "$ts/apps/spawn";
 
   function search() {
     return;
   }
 
   function settings() {
-    spawnProcess("SettingsApp");
+    spawnApp("SettingsApp");
   }
 
   function exit() {
-    spawnProcess("ExitApp");
+    spawnApp("ExitApp");
   }
 </script>
 
