@@ -1,6 +1,6 @@
 <script lang="ts">
   import { getAppGroups } from "$ts/apps/groups";
-  import { getAppById, isPopulatable } from "$ts/apps/utils";
+  import { getAppById } from "$ts/apps/utils";
   import { appLibrary } from "$ts/stores/apps";
   import { UserDataStore } from "$ts/stores/user";
   import { sleep } from "$ts/util";
@@ -13,7 +13,6 @@
   let rest: string[] = [];
 
   appLibrary.subscribe(async (v) => {
-    console.log(`AppLibrary change!`, v);
     $groups = {};
 
     await sleep(0);
