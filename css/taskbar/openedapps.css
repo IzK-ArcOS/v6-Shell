@@ -18,6 +18,7 @@
   color: var(--fg);
   background-color: transparent;
   font-size: 13px;
+  margin: 0;
 }
 
 #ArcShell div.taskbar div.opened-apps button:hover {
@@ -39,4 +40,10 @@
 #ArcShell div.taskbar div.opened-apps button.labels {
   width: fit-content;
   padding: 0 10px;
+}
+
+#ArcShell div.taskbar div.opened-apps button.closing {
+  opacity: 0;
+  width: 0 !important;
+  overflow: hidden;
 }
