@@ -1,8 +1,8 @@
-import type { App } from "$types/app";
+import type { App, AppMutator } from "$types/app";
 import { AppRuntime } from "$ts/apps";
 
-export class ShellRuntime extends AppRuntime { // Predictably might go unused, we'll have to see.
-  constructor(app: App) {
-    super(app);
+export class ShellRuntime extends AppRuntime {
+  constructor(app: App, mutator: AppMutator) {
+    super(app, mutator);
   }
 }
