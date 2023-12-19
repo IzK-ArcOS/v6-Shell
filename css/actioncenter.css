@@ -27,5 +27,5 @@ div.actioncenter.opened {
 }
 
 #ArcShell div.shell.vertical div.actioncenter {
-  height: var(--maximized-size)
+  height: var(--maximized-size);
 }

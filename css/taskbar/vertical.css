@@ -7,7 +7,7 @@
 #ArcShell div.taskbar.vertical div.system-area {
   margin-left: 0;
   margin-top: auto;
-  height: fit-content
+  height: fit-content;
 }
 
 #ArcShell div.taskbar.vertical div.system-area div.clock {

@@ -11,7 +11,7 @@ export const ArcShell: App = {
     author: "The ArcOS Team",
     version: ArcOSVersion,
     icon: Logo(),
-    core: true
+    core: true,
   },
   runtime: ShellRuntime,
   content: AppSvelte,
@@ -25,11 +25,11 @@ export const ArcShell: App = {
     maximized: false,
     headless: false,
     fullscreen: false,
-    resizable: false
+    resizable: false,
   },
   controls: {
     minimize: false,
     maximize: false,
-    close: false
-  }
-}
+    close: false,
+  },
+};

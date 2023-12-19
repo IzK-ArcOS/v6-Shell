@@ -20,11 +20,10 @@
   margin-right: 0px;
 }
 
-
 #ArcShell div.tb-.docked div.startmenu {
-  margin-bottom: var(--docking-margin)
+  margin-bottom: var(--docking-margin);
 }
 
 #ArcShell div.tb-top.docked div.startmenu {
-  margin-top: var(--docking-margin)
+  margin-top: var(--docking-margin);
 }

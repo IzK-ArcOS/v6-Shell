@@ -1,7 +1,6 @@
 <script lang="ts">
   import { spawnApp } from "$ts/apps/spawn";
   import { isPopulatable } from "$ts/apps/utils";
-  import { ProcessStack } from "$ts/stores/process";
   import { App } from "$types/app";
 
   export let app: App;

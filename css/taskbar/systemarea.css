@@ -32,5 +32,5 @@
 
 #ArcShell div.taskbar div.system-area button.action-center.activated {
   background-color: var(--accent);
-  color: var(--accent-darkest)
+  color: var(--accent-darkest);
 }

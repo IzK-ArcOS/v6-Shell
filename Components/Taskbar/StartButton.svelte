@@ -1,8 +1,8 @@
 <script>
-  import AccentedLogo from "../AccentedLogo.svelte";
   import { StartMenuOpened } from "$apps/Shell/ts/stores";
   import { Logo } from "$ts/branding";
   import { UserDataStore } from "$ts/stores/user";
+  import AccentedLogo from "../AccentedLogo.svelte";
 
   function toggle() {
     $StartMenuOpened = !$StartMenuOpened;

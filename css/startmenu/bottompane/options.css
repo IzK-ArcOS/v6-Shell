@@ -11,11 +11,19 @@
   line-height: 30px;
 }
 
-#ArcShell div.startmenu div.bottompane div.options button.material-icons-round:hover {
+#ArcShell
+  div.startmenu
+  div.bottompane
+  div.options
+  button.material-icons-round:hover {
   opacity: 0.7;
 }
 
-#ArcShell div.startmenu div.bottompane div.options button.material-icons-round:active {
+#ArcShell
+  div.startmenu
+  div.bottompane
+  div.options
+  button.material-icons-round:active {
   opacity: 0.4;
 }
 
