@@ -16,7 +16,6 @@
     class="shell taskbar-bounds tb-{$uds.sh.taskbar.pos} fullscreen"
     class:vertical={$uds.sh.taskbar.pos.includes("vertical")}
     class:docked={$uds.sh.taskbar.docked}
-    style="z-index: {$maxZIndex * 3 + 1};"
   >
     <div class="primary">
       <StartMenu />

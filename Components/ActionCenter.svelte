@@ -11,8 +11,4 @@
   StartMenuOpened.subscribe((v) => v && close());
 </script>
 
-<div
-  class="actioncenter"
-  style="z-index: {$maxZIndex + 6};"
-  class:opened={$ActionCenterOpened}
-></div>
+<div class="actioncenter" class:opened={$ActionCenterOpened}></div>

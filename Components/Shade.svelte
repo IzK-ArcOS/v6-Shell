@@ -11,7 +11,6 @@
 <button
   class="shade fullscreen"
   class:present={$ActionCenterOpened || $StartMenuOpened}
-  style="z-index: {$maxZIndex * 3};"
   on:click={closeAll}
 >
 </button>

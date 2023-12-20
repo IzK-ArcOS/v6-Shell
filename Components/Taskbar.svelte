@@ -7,7 +7,7 @@
   export let vertical = false;
 </script>
 
-<div class="taskbar" style="z-index: {$maxZIndex + 6};" class:vertical>
+<div class="taskbar" class:vertical>
   <StartButton />
   <OpenedApps />
   <SystemArea />

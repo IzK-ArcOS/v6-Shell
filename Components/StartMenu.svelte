@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { maxZIndex } from "$ts/stores/apps";
+  import { focusedPid, maxZIndex } from "$ts/stores/apps";
   import { ProcessStack } from "$ts/stores/process";
   import { UserDataStore } from "$ts/stores/user";
   import { ActionCenterOpened, StartMenuOpened } from "../ts/stores";
@@ -11,6 +11,7 @@
     $StartMenuOpened = false;
   }
 
+  focusedPid.subscribe(close);
   ProcessStack.processes.subscribe(close);
   ActionCenterOpened.subscribe((v) => v && close());
 </script>
@@ -20,7 +21,6 @@
     class="startmenu"
     class:small={$UserDataStore.sh.start.small}
     class:opened={$StartMenuOpened}
-    style="z-index: {$maxZIndex + 4};"
   >
     <div class="top">
       <LeftPane />
