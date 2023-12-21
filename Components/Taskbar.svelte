@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { maxZIndex } from "$ts/stores/apps";
   import OpenedApps from "./Taskbar/OpenedApps.svelte";
   import StartButton from "./Taskbar/StartButton.svelte";
   import SystemArea from "./Taskbar/SystemArea.svelte";

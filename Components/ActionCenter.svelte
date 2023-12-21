@@ -1,5 +1,4 @@
 <script>
-  import { maxZIndex } from "$ts/stores/apps";
   import { ProcessStack } from "$ts/stores/process";
   import { ActionCenterOpened, StartMenuOpened } from "../ts/stores";
 

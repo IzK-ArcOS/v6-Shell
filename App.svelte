@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { maxZIndex } from "$ts/stores/apps";
   import { UserDataStore as uds } from "$ts/stores/user";
   import ActionCenter from "./Components/ActionCenter.svelte";
   import Shade from "./Components/Shade.svelte";

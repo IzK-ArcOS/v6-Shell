@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { maxZIndex } from "$ts/stores/apps";
   import { ActionCenterOpened, StartMenuOpened } from "../ts/stores";
 
   function closeAll() {
