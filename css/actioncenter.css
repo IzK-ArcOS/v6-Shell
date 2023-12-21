@@ -1,8 +1,8 @@
 @import url("./actioncenter/docked.css");
 @import url("./actioncenter/position.css");
 
-div.actioncenter {
-  --closed-transform: 100px;
+#ArcShell div.actioncenter {
+  --closed-transform: 200px;
   height: 100%;
   width: 400px;
   margin: var(--docking-margin);
@@ -17,10 +17,11 @@ div.actioncenter {
   transform: translateX(var(--closed-transform));
   opacity: 0;
   pointer-events: none;
-  transition: all 0.3s;
+  transition: all 0.3s, transform 0.5s cubic-bezier(0.3, 1, 0.22, 1),
+    opacity 0.5s cubic-bezier(0.3, 1, 0.22, 1);
 }
 
-div.actioncenter.opened {
+#ArcShell div.actioncenter.opened {
   transform: unset;
   opacity: 1;
   pointer-events: initial;
