@@ -4,5 +4,5 @@
   height: 100%;
   border-radius: 5px;
   border: var(--win-border-light);
-  background-color: var(--darkened-overlay);
+  background-color: var(--win-bg);
 }

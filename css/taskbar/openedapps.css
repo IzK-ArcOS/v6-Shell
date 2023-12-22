@@ -1,6 +1,6 @@
 #ArcShell div.taskbar div.opened-apps {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   padding: 0 10px;
   height: 35px;
 }
@@ -12,13 +12,14 @@
   gap: 10px;
   width: 35px;
   height: 35px;
-  border-radius: 5px;
+  border-radius: 7px;
   border: none;
   padding: 0;
   color: var(--fg);
   background-color: transparent;
   font-size: 13px;
   margin: 0;
+  background-color: var(--button-active-bg);
 }
 
 #ArcShell div.taskbar div.opened-apps button:hover {
@@ -26,7 +27,7 @@
 }
 
 #ArcShell div.taskbar div.opened-apps button.activated {
-  background-color: var(--button-glass-hover-bg);
+  background-color: var(--button-bg);
 }
 
 #ArcShell div.taskbar div.opened-apps button:active {
@@ -37,7 +38,7 @@
   height: 24px;
 }
 
-#ArcShell div.taskbar div.opened-apps button.labels {
+#ArcShell div.taskbar:not(.vertical) div.opened-apps button.labels {
   width: fit-content;
   padding: 0 10px;
 }

@@ -28,6 +28,7 @@
   border-radius: var(--win-border-rad);
   background-color: transparent;
   color: var(--fg);
+  margin: 0;
   margin-bottom: 5px;
   padding-right: 0;
   box-shadow: none;

@@ -1,4 +1,5 @@
 @import url("./systemarea/tray.css");
+@import url("./systemarea/actioncenter.css");
 
 #ArcShell div.taskbar div.system-area {
   margin-left: auto;
@@ -7,30 +8,4 @@
   gap: 15px;
   height: 35px;
   color: var(--fg);
-}
-
-#ArcShell div.taskbar div.system-area button.action-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 35px;
-  height: 35px;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--button-glass-bg);
-  color: var(--fg);
-  font-size: 20px;
-}
-
-#ArcShell div.taskbar div.system-area button.action-center:hover {
-  background-color: var(--button-glass-hover-bg);
-}
-
-#ArcShell div.taskbar div.system-area button.action-center:active {
-  background-color: var(--button-glass-active-bg);
-}
-
-#ArcShell div.taskbar div.system-area button.action-center.activated {
-  background-color: var(--accent);
-  color: var(--accent-darkest);
 }

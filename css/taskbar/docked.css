@@ -5,17 +5,17 @@
 }
 
 #ArcShell div.shell.docked.tb-vertical div.taskbar {
-  border-right: var(--glass-alt-bg) 1px solid;
+  border-right: var(--win-border);
 }
 
 #ArcShell div.shell.docked.tb-vertical-right div.taskbar {
-  border-left: var(--glass-alt-bg) 1px solid;
+  border-left: var(--win-border);
 }
 
 #ArcShell div.shell.docked.tb- div.taskbar {
-  border-top: var(--glass-alt-bg) 1px solid;
+  border-top: var(--win-border);
 }
 
 #ArcShell div.shell.docked.tb-top div.taskbar {
-  border-bottom: var(--glass-alt-bg) 1px solid;
+  border-bottom: var(--win-border);
 }

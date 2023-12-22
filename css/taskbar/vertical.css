@@ -16,4 +16,16 @@
 
 #ArcShell div.taskbar.vertical div.opened-apps {
   padding: 10px 0;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+}
+
+#ArcShell div.taskbar.vertical div.opened-apps button {
+  width: 35px;
+  height: 35px;
+}
+
+#ArcShell div.taskbar.vertical div.opened-apps span {
+  display: none;
 }
