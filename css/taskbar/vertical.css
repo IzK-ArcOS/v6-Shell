@@ -29,3 +29,9 @@
 #ArcShell div.taskbar.vertical div.opened-apps span {
   display: none;
 }
+
+#ArcShell div.taskbar.vertical div.opened-apps.centered {
+  top: 0;
+  height: 100%;
+  width: fit-content;
+}

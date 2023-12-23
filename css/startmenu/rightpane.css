@@ -3,6 +3,10 @@
   width: 150px;
   height: 100%;
   border-radius: 5px;
-  border: var(--win-border-light);
+  border: var(--border);
   background-color: var(--win-bg);
+}
+
+#ArcShell div.startmenu.colored div.rightpane {
+  background-color: var(--button-glass-active-bg);
 }

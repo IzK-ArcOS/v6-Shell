@@ -18,9 +18,10 @@
 
 {#if $UserDataStore}
   <div
-    class="startmenu"
+    class="startmenu shell-colored"
     class:small={$UserDataStore.sh.start.small}
     class:opened={$StartMenuOpened}
+    class:colored={$UserDataStore.sh.taskbar.colored}
   >
     <div class="top">
       <LeftPane />

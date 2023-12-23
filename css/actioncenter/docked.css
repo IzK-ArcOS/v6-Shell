@@ -6,14 +6,14 @@
 #ArcShell div.shell.docked.tb- div.actioncenter,
 #ArcShell div.shell.docked.tb-top div.actioncenter,
 #ArcShell div.shell.docked.tb-vertical div.actioncenter {
-  border-left: var(--win-border);
+  border-left: var(--border);
 }
 
 #ArcShell div.shell.docked.tb-vertical-right div.actioncenter {
-  border-right: var(--win-border);
+  border-right: var(--border);
 }
 
 /* 
 #ArcShell div.shell.docked.tb-top div.actioncenter {
-  border-bottom: var(--win-border);
+  border-bottom: var(--border);
 } */

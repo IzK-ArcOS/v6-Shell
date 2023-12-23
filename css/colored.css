@@ -1,0 +1,18 @@
+.shell-colored::before {
+  content: " ";
+  border-radius: inherit;
+  width: calc(100%);
+  height: calc(100%);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -2;
+  opacity: 0.2;
+  /* margin: -1px; */
+  pointer-events: none;
+  transition: all 0.3s !important;
+}
+
+.shell-colored.colored::before {
+  background-color: var(--accent);
+}

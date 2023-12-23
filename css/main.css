@@ -3,11 +3,17 @@
 @import url("./actioncenter.css");
 @import url("./taskbar.css");
 @import url("./bounds.css");
+@import url("./colored.css");
 
 #ArcShell {
+  --border: var(--win-border);
   background-color: transparent;
   z-index: 100000000000000;
   pointer-events: none;
+}
+
+#ArcShell div.colored {
+  --border: var(--accent-light-transparent) 1px solid;
 }
 
 #ArcShell div.body {

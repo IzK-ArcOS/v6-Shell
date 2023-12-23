@@ -11,7 +11,7 @@
   width: 420px;
   height: 490px;
   margin: var(--docking-margin);
-  border: var(--win-border);
+  border: var(--border);
   border-radius: var(--win-border-rad);
   background-color: var(--glass-bg);
   -webkit-backdrop-filter: blur(var(--glass-blur));

@@ -1,3 +1,5 @@
+@import url("./openedapps/centered.css");
+
 #ArcShell div.taskbar div.opened-apps {
   display: flex;
   gap: 5px;
@@ -16,10 +18,14 @@
   border: none;
   padding: 0;
   color: var(--fg);
-  background-color: transparent;
   font-size: 13px;
   margin: 0;
-  background-color: var(--button-active-bg);
+  pointer-events: initial;
+  background-color: var(--button-bg);
+}
+
+#ArcShell div.taskbar.colored div.opened-apps button {
+  background-color: var(--button-glass-bg);
 }
 
 #ArcShell div.taskbar div.opened-apps button:hover {
@@ -27,7 +33,11 @@
 }
 
 #ArcShell div.taskbar div.opened-apps button.activated {
-  background-color: var(--button-bg);
+  background-color: var(--button-active-bg);
+}
+
+#ArcShell div.taskbar.colored div.opened-apps button.activated {
+  background-color: var(--button-glass-active-bg);
 }
 
 #ArcShell div.taskbar div.opened-apps button:active {

@@ -1,0 +1,11 @@
+#ArcShell div.taskbar div.opened-apps.centered {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+#ArcShell div.taskbar:not(.vertical) div.opened-apps.centered {
+  left: 0px;
+  width: 100%;
+}

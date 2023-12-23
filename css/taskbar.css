@@ -14,7 +14,7 @@
   background-color: var(--glass-bg);
   -webkit-backdrop-filter: blur(var(--glass-blur));
   backdrop-filter: blur(var(--glass-blur));
-  border: var(--win-border);
+  border: var(--border);
   display: flex;
   /* overflow: hidden; */
   pointer-events: initial;
