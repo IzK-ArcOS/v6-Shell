@@ -1,0 +1,37 @@
+#ArcShell div.actioncenter > div.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  margin: 0 -5px;
+  border-bottom: var(--button-glass-bg) 1px solid;
+  padding-bottom: 20px;
+  height: 85px;
+}
+
+#ArcShell div.actioncenter > div.header * {
+  margin: 0;
+}
+
+#ArcShell div.actioncenter > div.header h3.time {
+  font-size: 32px;
+}
+
+#ArcShell div.actioncenter > div.header p.date {
+  opacity: 0.5;
+}
+
+#ArcShell div.actioncenter > div.header button.clear {
+  width: 34px;
+  height: 34px;
+  font-size: 24px;
+  padding: 0;
+  background-color: var(--button-glass-bg);
+}
+
+#ArcShell div.actioncenter > div.header button.clear:hover {
+  background-color: var(--button-glass-hover-bg);
+}
+#ArcShell div.actioncenter > div.header button.clear:active {
+  background-color: var(--button-glass-active-bg);
+}
