@@ -1,3 +1,6 @@
+@import url("./notifications/notification.css");
+@import url("./notifications/error.css");
+
 #ArcShell div.actioncenter div.notifications {
   display: flex;
   flex-direction: column;
@@ -6,69 +9,4 @@
   overflow-y: scroll;
   margin-right: -8px; /* for the scrollbar */
   padding: 20px 0;
-}
-
-#ArcShell div.actioncenter div.notification {
-  display: flex;
-  align-items: start;
-  gap: 10px;
-  padding: 15px;
-  background-color: var(--button-glass-bg);
-  border-radius: var(--win-border-rad);
-}
-
-#ArcShell div.actioncenter div.notification img {
-  height: 48px;
-}
-
-#ArcShell div.actioncenter div.notification div.content {
-  width: calc(100% - 58px);
-}
-
-#ArcShell div.actioncenter div.notification div.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-#ArcShell div.actioncenter div.notification div.header div.right {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-#ArcShell div.actioncenter div.notification button.material-icons-round {
-  padding: 0;
-  font-size: 20px;
-  background-color: transparent;
-  margin: 0 !important;
-  max-width: 20px;
-}
-#ArcShell div.actioncenter div.notification span.timestamp {
-  opacity: 0.5;
-  margin-right: 5px;
-}
-#ArcShell div.actioncenter div.notification.collapsed span.timestamp {
-  margin-right: 0;
-}
-
-#ArcShell div.actioncenter div.notification p.message {
-  margin-bottom: 0;
-  margin-top: 5px;
-}
-
-#ArcShell div.actioncenter div.notification.collapsed p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-#ArcShell div.actioncenter div.notification button.collapse:not(.collapsed) {
-  rotate: 180deg;
-}
-
-#ArcShell div.actioncenter div.notification button.delete.collapsed {
-  opacity: 0;
-  pointer-events: none;
-  max-width: 0;
 }

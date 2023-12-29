@@ -1,0 +1,15 @@
+#ArcShell div.actioncenter div.notification.collapsed p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#ArcShell div.actioncenter div.notification button.collapse:not(.collapsed) {
+  rotate: 180deg;
+}
+
+#ArcShell div.actioncenter div.notification button.delete.collapsed {
+  opacity: 0;
+  pointer-events: none;
+  max-width: 0;
+}

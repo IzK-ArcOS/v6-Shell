@@ -2,6 +2,7 @@
 @import url("./actioncenter/position.css");
 @import url("./actioncenter/header.css");
 @import url("./actioncenter/notifications.css");
+@import url("./actioncenter/quicksettings.css");
 
 #ArcShell div.actioncenter {
   --closed-transform: 200px;

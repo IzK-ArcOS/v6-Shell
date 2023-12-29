@@ -1,0 +1,10 @@
+div.notifications div.service-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+div.notifications div.service-error span {
+  opacity: 0.5;
+}

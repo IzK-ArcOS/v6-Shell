@@ -28,7 +28,7 @@
   }
 </script>
 
-<div class="notification" class:collapsed>
+<div class="notification" class:collapsed class:no-image={!data.image}>
   {#if data.image}
     <div class="left">
       <img src={data.image} alt="" class="icon" />

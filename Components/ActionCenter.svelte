@@ -4,6 +4,7 @@
   import { ActionCenterOpened, StartMenuOpened } from "../ts/stores";
   import Header from "./ActionCenter/Header.svelte";
   import Notifications from "./ActionCenter/Notifications.svelte";
+  import QuickSettings from "./ActionCenter/QuickSettings.svelte";
 
   function close() {
     $ActionCenterOpened = false;
@@ -20,11 +21,5 @@
 >
   <Header />
   <Notifications />
-  <!--
-    - header
-      - clock
-      - clear button
-    - notifs
-    - quick settings
-  -->
+  <QuickSettings />
 </div>
