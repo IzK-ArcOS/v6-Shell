@@ -1,5 +1,6 @@
 import { Logo } from "$ts/branding";
 import { ArcOSVersion } from "$ts/env";
+import { UserDataStore } from "$ts/stores/user";
 import { App } from "$types/app";
 import AppSvelte from "../App.svelte";
 import { ShellRuntime } from "./runtime";
@@ -12,6 +13,7 @@ export const ArcShell: App = {
     version: ArcOSVersion,
     icon: Logo(),
     core: true,
+    hidden: true
   },
   runtime: ShellRuntime,
   content: AppSvelte,
@@ -32,4 +34,6 @@ export const ArcShell: App = {
     maximize: false,
     close: false,
   },
+  singleInstance: true,
+  loadCondition: () => !!UserDataStore.get()
 };
