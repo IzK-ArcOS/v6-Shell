@@ -48,6 +48,7 @@
   height: var(--size-secondary);
   pointer-events: none;
   z-index: 2;
+  transition: none !important;
 }
 
 #ArcShell div.shell.vertical div.secondary {
