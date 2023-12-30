@@ -3,6 +3,7 @@
   import { Notification } from "$types/notif";
   import dayjs from "dayjs";
   import relativeTime from "dayjs/plugin/relativeTime";
+  import updateLocale from "dayjs/plugin/updateLocale";
   import { onMount } from "svelte";
 
   export let id: string;
@@ -12,7 +13,26 @@
   let collapsed = true;
 
   dayjs.extend(relativeTime);
+  dayjs.extend(updateLocale);
 
+  dayjs.updateLocale("en", {
+    // TODO: make a better thing for this
+    relativeTime: {
+      future: "in %s",
+      past: "%s ago",
+      s: "1 sec",
+      m: "1 min",
+      mm: "%d min",
+      h: "an hr",
+      hh: "%d hrs",
+      d: "1 day",
+      dd: "%d days",
+      M: "1 month",
+      MM: "%d months",
+      y: "1 yr",
+      yy: "%d yrs",
+    },
+  });
   onMount(() => {
     setInterval(() => {
       time = dayjs(data.timestamp || null).fromNow();

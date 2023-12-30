@@ -9,4 +9,5 @@
   padding: 15px;
   background-color: var(--button-glass-bg);
   border-radius: var(--win-border-rad);
+  height: fit-content;
 }

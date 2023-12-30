@@ -1,3 +1,7 @@
+#ArcShell div.actioncenter div.notification.collapsed {
+  max-height: 78px;
+}
+
 #ArcShell div.actioncenter div.notification.collapsed p {
   white-space: nowrap;
   overflow: hidden;

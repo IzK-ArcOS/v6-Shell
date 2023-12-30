@@ -4,6 +4,14 @@
   justify-content: space-between;
 }
 
+#ArcShell div.actioncenter div.notification div.header * {
+  white-space: nowrap;
+}
+
+#ArcShell div.actioncenter div.notification div.header h3.title {
+  margin: 0;
+}
+
 #ArcShell div.actioncenter div.notification div.header div.right {
   display: flex;
   align-items: center;
