@@ -4,6 +4,7 @@
   import { onMount } from "svelte";
   import NotificationSvelte from "./Notifications/Notification.svelte";
   import { WarningIcon } from "$ts/images/general";
+  import { sleep } from "$ts/util";
 
   let errored = false;
   let store: Map<string, Notification> = new Map([]);
@@ -13,14 +14,20 @@
 
     if (!notifStore) return (errored = true);
 
-    notifStore.subscribe((v) => (store = v));
+    notifStore.subscribe(async (v) => {
+      store = null;
+      await sleep(0);
+      store = v;
+    });
   });
 </script>
 
 <div class="notifications">
-  {#each [...store] as [id, data]}
-    <NotificationSvelte {id} {data} />
-  {/each}
+  {#if store}
+    {#each [...store] as [id, data]}
+      <NotificationSvelte {id} {data} />
+    {/each}
+  {/if}
   {#if errored}
     <div class="service-error">
       <img src={WarningIcon} alt="" />
