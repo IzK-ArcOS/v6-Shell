@@ -1,17 +1,19 @@
 <script lang="ts">
-  import { deleteNotification } from "$ts/notif";
+  import { closeNotification, deleteNotification } from "$ts/notif";
   import { RelativeTimeMod } from "$ts/stores/dayjs";
   import { Notification } from "$types/notif";
   import dayjs from "dayjs";
   import relativeTime from "dayjs/plugin/relativeTime";
   import updateLocale from "dayjs/plugin/updateLocale";
   import { onMount } from "svelte";
+  import Button from "./Notification/Button.svelte";
 
   export let id: string;
   export let data: Notification;
+  export let pushed = false;
 
   let time = "";
-  let collapsed = true;
+  let collapsed = false;
 
   dayjs.extend(relativeTime);
   dayjs.extend(updateLocale);
@@ -40,24 +42,36 @@
     <div class="header">
       <h3 class="title">{data.title}</h3>
       <div class="right">
-        <span class="timestamp">{time}</span>
+        {#if !pushed}
+          <span class="timestamp">{time}</span>
 
-        <button
-          class="delete material-icons-round"
-          on:click={deleteNotif}
-          class:collapsed
-        >
-          delete
-        </button>
-        <button
-          class="collapse material-icons-round"
-          class:collapsed
-          on:click={toggleCollapse}
-        >
-          expand_more
-        </button>
+          <button
+            class="delete material-icons-round"
+            on:click={deleteNotif}
+            class:collapsed
+          >
+            delete
+          </button>
+          <button
+            class="collapse material-icons-round"
+            class:collapsed
+            on:click={toggleCollapse}
+          >
+            expand_more
+          </button>
+        {:else}
+          <button
+            class="close material-icons-round"
+            on:click={closeNotification}>arrow_forward</button
+          >
+        {/if}
       </div>
     </div>
     <p class="message">{data.message}</p>
+    <div class="buttons">
+      {#each data.buttons as button}
+        <Button {button} {id} />
+      {/each}
+    </div>
   </div>
 </div>

@@ -4,6 +4,7 @@
 @import url("./taskbar.css");
 @import url("./bounds.css");
 @import url("./colored.css");
+@import url("./pushnotification.css");
 
 #ArcShell {
   --border: var(--win-border);
@@ -38,7 +39,7 @@
   flex-direction: var(--primary-direction);
   height: calc(100% - var(--size-secondary));
   width: 100%;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   pointer-events: none;
   z-index: 1;
 }

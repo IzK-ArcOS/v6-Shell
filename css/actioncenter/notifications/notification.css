@@ -1,8 +1,9 @@
 @import url("./notification/header.css");
+@import url("./notification/buttons.css");
 @import url("./notification/content.css");
 @import url("./notification/collapse.css");
 
-#ArcShell div.actioncenter div.notification {
+#ArcShell div.notification {
   display: flex;
   align-items: start;
   gap: 10px;

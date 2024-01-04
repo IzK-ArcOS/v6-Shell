@@ -1,16 +1,16 @@
-#ArcShell div.actioncenter div.notification img {
+#ArcShell div.notification img {
   height: 48px;
 }
 
-#ArcShell div.actioncenter div.notification div.content {
+#ArcShell div.notification div.content {
   width: calc(100% - 58px);
 }
 
-#ArcShell div.actioncenter div.notification.no-image div.content {
+#ArcShell div.notification.no-image div.content {
   width: 100%;
 }
 
-#ArcShell div.actioncenter div.notification p.message {
+#ArcShell div.notification p.message {
   margin-bottom: 0;
   margin-top: 5px;
 }

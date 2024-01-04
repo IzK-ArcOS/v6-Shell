@@ -1,0 +1,23 @@
+#ArcShell div.notification div.buttons {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  height: 30px;
+  margin-top: 10px;
+}
+#ArcShell div.notification div.buttons button {
+  flex-grow: 1;
+  margin: 0;
+  background-color: var(--button-glass-bg);
+}
+
+#ArcShell div.notification div.buttons button:hover {
+  background-color: var(--button-glass-hover-bg);
+}
+#ArcShell div.notification div.buttons button:active {
+  background-color: var(--button-glass-active-bg);
+}
+
+#ArcShell div.notification.collapsed div.buttons {
+  display: none;
+}

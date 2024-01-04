@@ -1,0 +1,33 @@
+@import url("./pushnotification/position.css");
+
+div.push-notification {
+  --offset: 420px;
+
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  backdrop-filter: blur(var(--glass-blur));
+  padding: 5;
+  margin: 10px 0;
+  max-width: 400px;
+  border: var(--border);
+  border-radius: 10px;
+  transform: translateX(var(--offset));
+  transition: all 0.3s, transform 0s;
+  margin-top: auto;
+  color: var(--fg);
+  margin-right: -100px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+div.push-notification.show {
+  margin-right: 0;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+
+#ArcShell div.push-notification div.notification {
+  background-color: transparent;
+}

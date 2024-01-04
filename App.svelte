@@ -1,6 +1,7 @@
 <script lang="ts">
   import { UserDataStore as uds } from "$ts/stores/user";
   import ActionCenter from "./Components/ActionCenter.svelte";
+  import PushNotification from "./Components/PushNotification.svelte";
   import Shade from "./Components/Shade.svelte";
   import StartMenu from "./Components/StartMenu.svelte";
   import Taskbar from "./Components/Taskbar.svelte";
@@ -18,6 +19,7 @@
   >
     <div class="primary">
       <StartMenu />
+      <PushNotification />
       <ActionCenter />
     </div>
     <div class="secondary">

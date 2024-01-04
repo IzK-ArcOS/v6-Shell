@@ -2,6 +2,18 @@
   margin-top: auto;
 }
 
+#ArcShell div.shell:not(.vertical) div.startmenu {
+  margin-right: auto !important;
+}
+
+#ArcShell div.shell.vertical.tb-vertical div.startmenu {
+  margin-right: auto !important;
+}
+
+#ArcShell div.shell.vertical.tb-vertical-right div.startmenu {
+  margin-left: auto;
+}
+
 #ArcShell div.tb-top div.startmenu {
   margin-top: 0;
   margin-bottom: auto;
