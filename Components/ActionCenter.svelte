@@ -1,4 +1,5 @@
 <script>
+  import { closeNotification } from "$ts/notif";
   import { ProcessStack } from "$ts/stores/process";
   import { UserDataStore } from "$ts/stores/user";
   import { ActionCenterOpened, StartMenuOpened } from "../ts/stores";
@@ -10,6 +11,7 @@
     $ActionCenterOpened = false;
   }
 
+  ActionCenterOpened.subscribe(closeNotification);
   ProcessStack.processes.subscribe(close);
   StartMenuOpened.subscribe((v) => v && close());
 </script>
