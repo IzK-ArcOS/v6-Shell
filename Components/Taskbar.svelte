@@ -11,6 +11,7 @@
   class="taskbar shell-colored"
   class:vertical
   class:colored={$UserDataStore.sh.taskbar.colored}
+  data-contextmenu="shell-taskbar"
 >
   <StartButton />
   <OpenedApps />

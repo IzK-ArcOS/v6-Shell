@@ -15,7 +15,7 @@
   appLibrary.subscribe(async (v) => {
     $groups = {};
 
-    await sleep(0);
+    await sleep();
 
     const getter = getAppGroups();
 
@@ -24,7 +24,7 @@
   });
 </script>
 
-<div class="leftpane">
+<div class="leftpane" data-contextmenu="startmenu-applist">
   {#if !$UserDataStore.sh.start.noGroups}
     {#each Object.values($groups) as entry}
       <Group group={entry} />

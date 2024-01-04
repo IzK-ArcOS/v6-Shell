@@ -18,7 +18,7 @@
   });
 </script>
 
-<div class="clock">
+<div class="clock" data-contextmenu="clockcontext">
   <h3 class="time">{timeStr}</h3>
   <p class="date">{dateStr}</p>
 </div>

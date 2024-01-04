@@ -1,3 +1,7 @@
 #ArcShell div.shell.tb-vertical-right div.actioncenter {
   --closed-transform: -200px;
 }
+
+#ArcShell div.tb-top div.actioncenter {
+  margin-top: 0;
+}

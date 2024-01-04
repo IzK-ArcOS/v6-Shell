@@ -3,6 +3,7 @@ import { ArcOSVersion } from "$ts/env";
 import { UserDataStore } from "$ts/stores/user";
 import { App } from "$types/app";
 import AppSvelte from "../App.svelte";
+import { ShellContext } from "./context";
 import { ShellRuntime } from "./runtime";
 
 export const ArcShell: App = {
@@ -35,5 +36,6 @@ export const ArcShell: App = {
     close: false,
   },
   singleInstance: true,
+  contextMenu: ShellContext,
   loadCondition: () => !!UserDataStore.get()
 };
