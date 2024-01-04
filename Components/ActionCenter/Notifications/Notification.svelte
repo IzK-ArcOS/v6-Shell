@@ -68,10 +68,12 @@
       </div>
     </div>
     <p class="message">{data.message}</p>
-    <div class="buttons">
-      {#each data.buttons as button}
-        <Button {button} {id} />
-      {/each}
-    </div>
+    {#if data.buttons}
+      <div class="buttons">
+        {#each data.buttons as button}
+          <Button {button} {id} />
+        {/each}
+      </div>
+    {/if}
   </div>
 </div>

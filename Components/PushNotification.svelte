@@ -4,6 +4,7 @@
   import { onMount } from "svelte";
   import Notification from "./ActionCenter/Notifications/Notification.svelte";
   import { sleep } from "$ts/util";
+  import { ArcSoundBus } from "$ts/soundbus";
 
   let show = false;
   let id = "";
@@ -21,6 +22,8 @@
       await sleep(100);
 
       show = true;
+
+      ArcSoundBus.playSound("arcos.notification");
 
       data = $store.get(id);
     });
