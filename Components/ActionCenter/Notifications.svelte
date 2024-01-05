@@ -16,6 +16,9 @@
 
     notifStore.subscribe(async (v) => {
       store = null;
+
+      if (!v) return (errored = true);
+
       await sleep();
       store = v;
     });

@@ -10,6 +10,14 @@
 
 #ArcShell div.notification div.header h3.title {
   margin: 0;
+  max-width: calc(100% - 115px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 5px;
+}
+
+#ArcShell div.notification.collapsed div.header h3.title {
+  max-width: unset;
 }
 
 #ArcShell div.notification div.header div.right {
@@ -29,8 +37,13 @@
 #ArcShell div.notification span.timestamp {
   opacity: 0.5;
   margin-right: 5px;
+  display: block;
+  max-width: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #ArcShell div.notification.collapsed span.timestamp {
   margin-right: 0;
+  max-width: 40px;
 }

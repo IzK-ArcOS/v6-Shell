@@ -7,32 +7,47 @@
   import updateLocale from "dayjs/plugin/updateLocale";
   import { onMount } from "svelte";
   import Button from "./Notification/Button.svelte";
+  import { sleep } from "$ts/util";
 
   export let id: string;
   export let data: Notification;
   export let pushed = false;
 
   let time = "";
+  let shortTime = "";
   let collapsed = false;
+  let deleting = false;
 
   dayjs.extend(relativeTime);
   dayjs.extend(updateLocale);
   dayjs.updateLocale("en", RelativeTimeMod);
 
   onMount(() =>
-    setInterval(() => (time = dayjs(data.timestamp || null).fromNow()))
+    setInterval(() => {
+      const dj = dayjs(data.timestamp || null);
+      time = dj.fromNow();
+      shortTime = dj.format("HH:mm");
+    })
   );
 
   function toggleCollapse() {
     collapsed = !collapsed;
   }
 
-  function deleteNotif() {
+  async function deleteNotif() {
+    deleting = true;
+
+    await sleep(300);
     deleteNotification(id);
   }
 </script>
 
-<div class="notification" class:collapsed class:no-image={!data.image}>
+<div
+  class="notification"
+  class:collapsed
+  class:no-image={!data.image}
+  class:deleting
+>
   {#if data.image}
     <div class="left">
       <img src={data.image} alt="" class="icon" />
@@ -40,10 +55,12 @@
   {/if}
   <div class="content">
     <div class="header">
-      <h3 class="title">{data.title}</h3>
+      <h3 class="title" title={data.title}>{data.title}</h3>
       <div class="right">
         {#if !pushed}
-          <span class="timestamp">{time}</span>
+          <span class="timestamp" title={collapsed ? shortTime : time}>
+            {collapsed ? shortTime : time}
+          </span>
 
           <button
             class="delete material-icons-round"
