@@ -27,6 +27,9 @@
     {#each [...store] as [id, data]}
       <NotificationSvelte {id} {data} />
     {/each}
+    {#if !store.size}
+      <p class="none">You have no notifications</p>
+    {/if}
   {/if}
   {#if errored}
     <div class="service-error">

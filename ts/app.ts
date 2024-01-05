@@ -12,6 +12,7 @@ export const ArcShell: App = {
     description: "The ArcOS Shell",
     author: "The ArcOS Team",
     version: ArcOSVersion,
+    appGroup: "internal",
     icon: Logo(),
     core: true,
     hidden: true

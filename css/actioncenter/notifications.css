@@ -10,3 +10,8 @@
   margin-right: -8px; /* for the scrollbar */
   padding: 20px 0;
 }
+
+#ArcShell div.actioncenter div.notifications p.none {
+  opacity: 0.5;
+  text-align: center;
+}
