@@ -1,6 +1,7 @@
 #ArcShell div.actioncenter div.quick-settings {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 #ArcShell div.actioncenter div.quick-settings div.group {
