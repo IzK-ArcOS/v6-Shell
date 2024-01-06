@@ -1,25 +1,34 @@
 <script lang="ts">
-  import { getNotifCurrentStore, getNotificationStore } from "$ts/notif";
+  import {
+    getNotifCurrentStore,
+    getNotificationStore,
+    isNotificationServiceActive,
+  } from "$ts/notif";
+  import { ArcSoundBus } from "$ts/soundbus";
+  import { ProcessStack } from "$ts/stores/process";
   import { UserDataStore } from "$ts/stores/user";
+  import { sleep } from "$ts/util";
   import { onMount } from "svelte";
   import Notification from "./ActionCenter/Notifications/Notification.svelte";
-  import { sleep } from "$ts/util";
-  import { ArcSoundBus } from "$ts/soundbus";
+  import { Unsubscriber } from "svelte/store";
 
   let show = false;
   let id = "";
   let data = null;
+  let current = getNotifCurrentStore();
+  let store = getNotificationStore();
+  let unsubscribe: Unsubscriber;
 
-  const current = getNotifCurrentStore();
-  const store = getNotificationStore();
+  onMount(subscribe);
 
-  onMount(() => {
-    current.subscribe(async (v) => {
+  function subscribe() {
+    unsubscribe = current.subscribe(async (v) => {
+      if (id == v) return;
       id = v;
       show = false;
 
       if (!v) return;
-      await sleep(100);
+      await sleep(data ? 500 : 0);
 
       show = true;
 
@@ -27,6 +36,19 @@
 
       data = $store.get(id);
     });
+  }
+
+  ProcessStack.processes.subscribe(() => {
+    const errored = !isNotificationServiceActive();
+
+    if (!errored && unsubscribe) {
+      current = getNotifCurrentStore();
+      store = getNotificationStore();
+
+      unsubscribe();
+      unsubscribe = null;
+      subscribe();
+    }
   });
 </script>
 

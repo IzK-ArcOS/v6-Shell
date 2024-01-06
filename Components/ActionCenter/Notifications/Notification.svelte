@@ -37,7 +37,8 @@
   async function deleteNotif() {
     deleting = true;
 
-    await sleep(300);
+    await sleep(500);
+
     deleteNotification(id);
   }
 </script>
@@ -46,7 +47,7 @@
   class="notification"
   class:collapsed
   class:no-image={!data.image}
-  class:deleting
+  class:deleting={deleting && !pushed}
 >
   {#if data.image}
     <div class="left">
@@ -88,7 +89,7 @@
     {#if data.buttons}
       <div class="buttons">
         {#each data.buttons as button}
-          <Button {button} {id} />
+          <Button {pushed} bind:deleting {button} {id} />
         {/each}
       </div>
     {/if}

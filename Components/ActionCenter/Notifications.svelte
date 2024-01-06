@@ -1,10 +1,11 @@
 <script lang="ts">
-  import { getNotificationStore } from "$ts/notif";
+  import { getNotificationStore, isNotificationServiceActive } from "$ts/notif";
   import { Notification } from "$types/notif";
   import { onMount } from "svelte";
   import NotificationSvelte from "./Notifications/Notification.svelte";
-  import { WarningIcon } from "$ts/images/general";
+  import { WarningIcon } from "$ts/images/dialog";
   import { sleep } from "$ts/util";
+  import { ProcessStack } from "$ts/stores/process";
 
   let errored = false;
   let store: Map<string, Notification> = new Map([]);
@@ -12,16 +13,27 @@
   onMount(() => {
     const notifStore = getNotificationStore();
 
-    if (!notifStore) return (errored = true);
+    if (!notifStore) return;
 
     notifStore.subscribe(async (v) => {
       store = null;
 
-      if (!v) return (errored = true);
+      if (!v) return;
 
       await sleep();
+
       store = v;
     });
+  });
+
+  ProcessStack.processes.subscribe(() => {
+    errored = !isNotificationServiceActive();
+
+    if (!errored) {
+      const notifStore = getNotificationStore();
+
+      store = notifStore.get();
+    }
   });
 </script>
 

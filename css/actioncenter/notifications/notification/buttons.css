@@ -1,14 +1,16 @@
 #ArcShell div.notification div.buttons {
   display: flex;
-  gap: 5px;
+  gap: 8px;
   align-items: center;
-  height: 30px;
-  margin-top: 10px;
+  height: 32px;
+  margin-top: 15px;
 }
+
 #ArcShell div.notification div.buttons button {
   flex-grow: 1;
   margin: 0;
   background-color: var(--button-glass-bg);
+  height: 32px;
 }
 
 #ArcShell div.notification div.buttons button:hover {

@@ -15,7 +15,7 @@ div.push-notification {
   transform: translateX(var(--offset));
   transition: all 0.3s, transform 0s;
   margin-top: auto;
-  background-color: var(--win-bg);
+  background-color: var(--glass-bg);
   color: var(--fg);
   margin-right: -100px;
   opacity: 0;

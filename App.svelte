@@ -9,6 +9,7 @@
   import "./css/main.css";
   import { ShellRuntime } from "./ts/runtime";
   import { StartCoreProcesses } from "$ts/process/startup";
+  import { getAppById, spawnOverlay } from "$ts/apps";
 
   export let runtime: ShellRuntime;
 
@@ -20,6 +21,8 @@
     if (args.length > 0 && args[0] === true) await StartCoreProcesses(true);
 
     render = true;
+
+    spawnOverlay(getAppById("ArcTerm"), runtime.process.pid);
   });
 </script>
 

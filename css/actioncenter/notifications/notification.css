@@ -12,3 +12,8 @@
   border-radius: var(--win-border-rad);
   height: fit-content;
 }
+
+#ArcShell div.notification.deleting {
+  transform: translateX(150px);
+  opacity: 0;
+}
