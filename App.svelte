@@ -21,8 +21,6 @@
     if (args.length > 0 && args[0] === true) await StartCoreProcesses(true);
 
     render = true;
-
-    spawnOverlay(getAppById("ArcTerm"), runtime.process.pid);
   });
 </script>
 

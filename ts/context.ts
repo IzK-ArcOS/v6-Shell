@@ -1,5 +1,7 @@
 import { OpenSettingsPage } from "$apps/Settings/ts/main";
 import { SEP_ITEM } from "$state/Desktop/ts/store";
+import { spawnApp } from "$ts/apps";
+import { ProcessManagerIcon } from "$ts/images/apps";
 import { AppsIcon } from "$ts/images/general";
 import { UserDataStore } from "$ts/stores/user";
 import { AppContextMenu } from "$types/app";
@@ -41,14 +43,14 @@ export const ShellContext: AppContextMenu = {
       },
       isActive: () => UserDataStore.get().sh.taskbar.clock12hr,
     },
-    /* SEP_ITEM,
+    SEP_ITEM,
     {
-      image: AppManIcon,
-      caption: "Application Manager",
+      image: ProcessManagerIcon,
+      caption: "Processes",
       action: () => {
-        openWindow("AppMan");
+        spawnApp("ProcessManager")
       },
-    }, */
+    },
     SEP_ITEM,
     {
       icon: "settings",
@@ -59,13 +61,13 @@ export const ShellContext: AppContextMenu = {
     },
   ],
   "shell-taskbar": [
-    /* {
-      image: AppManIcon,
-      caption: "Application Manager",
+    {
+      image: ProcessManagerIcon,
+      caption: "Processes",
       action: () => {
-        openWindow("AppMan");
+        spawnApp("ProcessManager");
       },
-    }, */
+    },
     SEP_ITEM,
     {
       icon: "settings",
