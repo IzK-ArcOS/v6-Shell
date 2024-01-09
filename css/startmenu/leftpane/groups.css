@@ -24,7 +24,7 @@
   align-items: center;
   padding: 5px;
   border: none;
-  gap: 14px;
+  gap: var(--font-size);
   border-radius: var(--win-border-rad);
   background-color: transparent;
   color: var(--fg);
