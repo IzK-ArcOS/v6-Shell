@@ -24,8 +24,8 @@ export function disposeTrayIcon(identifier: string) {
 export function trayExists(identifier: string): boolean {
   const icons = trayIcons.get();
 
-  for (let i = 0; i < icons.length; i++) {
-    if (icons[i].identifier == identifier) return true;
+  for (const icon of icons) {
+    if (icon.identifier == identifier) return true;
   }
 
   return false;

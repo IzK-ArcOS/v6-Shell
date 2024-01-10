@@ -1,12 +1,17 @@
 @import url("./leftpane/groups.css");
 
 #ArcShell div.startmenu div.leftpane {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
   width: calc(100% - 160px);
   height: 100%;
   padding: 15px;
+  overflow-y: scroll;
+  padding-right: 7px;
+}
+
+#ArcShell div.startmenu div.leftpane > span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 #ArcShell div.startmenu button.item {

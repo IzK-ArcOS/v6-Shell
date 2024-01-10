@@ -3,4 +3,5 @@
   align-items: center;
   gap: 10px;
   height: calc(100% - 50px);
+  max-height: calc(100% - 60px);
 }

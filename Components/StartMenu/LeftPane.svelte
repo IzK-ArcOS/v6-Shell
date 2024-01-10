@@ -25,16 +25,18 @@
 </script>
 
 <div class="leftpane" data-contextmenu="startmenu-applist">
-  {#if !$UserDataStore.sh.start.noGroups}
-    {#each Object.values($groups) as entry}
-      <Group group={entry} />
-    {/each}
-    {#each rest as id}
-      <AppListItem app={getAppById(id)} />
-    {/each}
-  {:else}
-    {#each [...$appLibrary] as [_, window]}
-      <AppListItem app={window} />
-    {/each}
-  {/if}
+  <span>
+    {#if !$UserDataStore.sh.start.noGroups}
+      {#each Object.values($groups) as entry}
+        <Group group={entry} />
+      {/each}
+      {#each rest as id}
+        <AppListItem app={getAppById(id)} />
+      {/each}
+    {:else}
+      {#each [...$appLibrary] as [_, window]}
+        <AppListItem app={window} />
+      {/each}
+    {/if}
+  </span>
 </div>
