@@ -1,6 +1,7 @@
 import { closeContextMenu } from "$state/Desktop/ts/context";
 import { getAppById, spawnOverlay } from "$ts/apps";
 import { Process } from "$ts/process";
+import { GlobalDispatch } from "$ts/process/dispatch/global";
 import { focusedPid } from "$ts/stores/apps";
 import { AppKeyCombinations } from "$types/accelerator";
 import { ActionCenterOpened, StartMenuOpened } from "./stores";
@@ -57,6 +58,14 @@ export const ShellAccelerators: (process: Process) => AppKeyCombinations = (proc
     global: true,
     action() {
       closeContextMenu();
+    }
+  },
+  {
+    key: "d",
+    global: true,
+    alt: true,
+    action() {
+      GlobalDispatch.dispatch("minimize-all")
     }
   }
 ]
