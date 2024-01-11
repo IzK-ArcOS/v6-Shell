@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { StartCoreProcesses } from "$ts/process/startup";
   import { UserDataStore as uds } from "$ts/stores/user";
   import { onMount } from "svelte";
   import ActionCenter from "./Components/ActionCenter.svelte";
@@ -8,8 +9,6 @@
   import Taskbar from "./Components/Taskbar.svelte";
   import "./css/main.css";
   import { ShellRuntime } from "./ts/runtime";
-  import { StartCoreProcesses } from "$ts/process/startup";
-  import { getAppById, spawnOverlay } from "$ts/apps";
 
   export let runtime: ShellRuntime;
 

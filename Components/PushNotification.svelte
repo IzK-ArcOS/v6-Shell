@@ -9,8 +9,8 @@
   import { UserDataStore } from "$ts/stores/user";
   import { sleep } from "$ts/util";
   import { onMount } from "svelte";
-  import Notification from "./ActionCenter/Notifications/Notification.svelte";
   import { Unsubscriber } from "svelte/store";
+  import Notification from "./ActionCenter/Notifications/Notification.svelte";
 
   let show = false;
   let id = "";

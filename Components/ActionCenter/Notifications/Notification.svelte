@@ -1,13 +1,13 @@
 <script lang="ts">
   import { closeNotification, deleteNotification } from "$ts/notif";
   import { RelativeTimeMod } from "$ts/stores/dayjs";
+  import { sleep } from "$ts/util";
   import { Notification } from "$types/notif";
   import dayjs from "dayjs";
   import relativeTime from "dayjs/plugin/relativeTime";
   import updateLocale from "dayjs/plugin/updateLocale";
   import { onMount } from "svelte";
   import Button from "./Notification/Button.svelte";
-  import { sleep } from "$ts/util";
 
   export let id: string;
   export let data: Notification;

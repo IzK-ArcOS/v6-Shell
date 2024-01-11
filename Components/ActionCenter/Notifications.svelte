@@ -1,11 +1,11 @@
 <script lang="ts">
+  import { WarningIcon } from "$ts/images/dialog";
   import { getNotificationStore, isNotificationServiceActive } from "$ts/notif";
+  import { ProcessStack } from "$ts/stores/process";
+  import { sleep } from "$ts/util";
   import { Notification } from "$types/notif";
   import { onMount } from "svelte";
   import NotificationSvelte from "./Notifications/Notification.svelte";
-  import { WarningIcon } from "$ts/images/dialog";
-  import { sleep } from "$ts/util";
-  import { ProcessStack } from "$ts/stores/process";
 
   let errored = false;
   let store: Map<string, Notification> = new Map([]);
