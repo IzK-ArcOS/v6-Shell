@@ -11,6 +11,7 @@
   import { onMount } from "svelte";
   import { Unsubscriber } from "svelte/store";
   import Notification from "./ActionCenter/Notifications/Notification.svelte";
+  import { ActionCenterOpened } from "../ts/stores";
 
   let show = false;
   let id = "";
@@ -30,7 +31,7 @@
       if (!v) return;
       await sleep(data ? 500 : 0);
 
-      show = true;
+      show = !$ActionCenterOpened;
 
       ArcSoundBus.playSound("arcos.notification");
 

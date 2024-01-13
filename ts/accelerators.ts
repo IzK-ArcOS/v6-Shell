@@ -1,5 +1,5 @@
 import { closeContextMenu } from "$state/Desktop/ts/context";
-import { getAppById, spawnOverlay } from "$ts/apps";
+import { getAppById, spawnApp, spawnOverlay } from "$ts/apps";
 import { Process } from "$ts/process";
 import { GlobalDispatch } from "$ts/process/dispatch/global";
 import { focusedPid } from "$ts/stores/apps";
@@ -76,5 +76,13 @@ export const ShellAccelerators: (process: Process) => AppKeyCombinations = (proc
     action() {
       GlobalDispatch.dispatch("minimize-all")
     }
+  },
+  {
+    key: "t",
+    alt: true,
+    action() {
+      spawnApp("ArcTerm");
+    },
+    global: true
   }
 ]
