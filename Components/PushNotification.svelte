@@ -10,8 +10,8 @@
   import { sleep } from "$ts/util";
   import { onMount } from "svelte";
   import { Unsubscriber } from "svelte/store";
-  import Notification from "./ActionCenter/Notifications/Notification.svelte";
   import { ActionCenterOpened } from "../ts/stores";
+  import Notification from "./ActionCenter/Notifications/Notification.svelte";
 
   let show = false;
   let id = "";
@@ -23,6 +23,8 @@
   onMount(subscribe);
 
   function subscribe() {
+    if (!current) return;
+
     unsubscribe = current.subscribe(async (v) => {
       if (id == v) return;
       id = v;
