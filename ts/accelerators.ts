@@ -38,7 +38,7 @@ export const ShellAccelerators: (process: Process) => AppKeyCombinations = (proc
 
       if (proc.app && proc.app.metadata.core) return;
 
-      process.handler.kill(pid);
+      process.handler.kill(pid, true);
 
       await sleep()
 

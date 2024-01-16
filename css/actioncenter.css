@@ -8,6 +8,7 @@
   --closed-transform: 200px;
   height: 100%;
   width: 400px;
+  min-width: 400px;
   margin: var(--docking-margin);
   background-color: var(--glass-bg);
   border: var(--border);
