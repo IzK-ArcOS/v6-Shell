@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { isDisabled } from "$ts/apps/disable/utils";
   import { spawnApp } from "$ts/apps/spawn";
   import { isPopulatable } from "$ts/apps/utils";
   import { UserDataStore } from "$ts/stores/user";
@@ -9,7 +10,7 @@
   let render = true;
 
   UserDataStore.subscribe(() => {
-    render = isPopulatable(app);
+    render = isPopulatable(app) && !isDisabled(app.id);
   });
 
   function open() {
