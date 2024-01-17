@@ -1,5 +1,5 @@
 import { closeContextMenu } from "$state/Desktop/ts/context";
-import { getAppById, spawnApp, spawnOverlay } from "$ts/apps";
+import { getAppById, isOpened, spawnApp, spawnOverlay } from "$ts/apps";
 import { Process } from "$ts/process";
 import { GlobalDispatch } from "$ts/process/dispatch/global";
 import { focusedPid } from "$ts/stores/apps";
@@ -11,8 +11,9 @@ export const ShellAccelerators: (process: Process) => AppKeyCombinations = (proc
   {
     action(proc) {
       const opened = process.hasIdAsSubprocess("ProcessManager");
+      const elevating = isOpened("SecureContext");
 
-      if (opened) return;
+      if (opened || elevating) return;
 
       spawnOverlay(getAppById("ProcessManager"), proc.pid, [], true);
     },
@@ -36,7 +37,7 @@ export const ShellAccelerators: (process: Process) => AppKeyCombinations = (proc
 
       const parentPid = proc.parentPid
 
-      if (proc.app && proc.app.metadata.core) return;
+      if (proc.app && (proc.app.metadata.core || proc.app.metadata.noCloseAccelerator)) return;
 
       process.handler.kill(pid, true);
 
