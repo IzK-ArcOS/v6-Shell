@@ -85,7 +85,7 @@
         {/if}
       </div>
     </div>
-    <p class="message">{data.message}</p>
+    <p class="message">{@html data.message}</p>
     {#if data.buttons}
       <div class="buttons">
         {#each data.buttons as button}
