@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { logout } from "$state/Desktop/ts/logout";
   import { spawnApp } from "$ts/apps/spawn";
 
   function search() {
@@ -10,7 +11,7 @@
   }
 
   function exit() {
-    spawnApp("ExitApp");
+    logout();
   }
 </script>
 
