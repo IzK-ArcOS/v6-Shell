@@ -8,7 +8,7 @@
   import { ProcessStack } from "$ts/stores/process";
   import { UserDataStore } from "$ts/stores/user";
   import { sleep } from "$ts/util";
-  import { onMount } from "svelte";
+  import { onDestroy, onMount } from "svelte";
   import { Unsubscriber } from "svelte/store";
   import { ActionCenterOpened } from "../ts/stores";
   import Notification from "./ActionCenter/Notifications/Notification.svelte";
@@ -41,7 +41,7 @@
     });
   }
 
-  ProcessStack.processes.subscribe(() => {
+  let procSub = ProcessStack.processes.subscribe(() => {
     const errored = !isNotificationServiceActive();
 
     if (!errored && unsubscribe) {
@@ -52,6 +52,12 @@
       unsubscribe = null;
       subscribe();
     }
+  });
+
+  onDestroy(() => {
+    console.log("Unsubscribing!");
+    procSub();
+    unsubscribe();
   });
 </script>
 
