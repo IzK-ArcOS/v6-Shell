@@ -11,7 +11,7 @@
   }
 
   function exit() {
-    logout();
+    spawnApp("ExitApp");
   }
 </script>
 
