@@ -9,6 +9,7 @@
   import Taskbar from "./Components/Taskbar.svelte";
   import "./css/main.css";
   import { ShellRuntime } from "./ts/runtime";
+  import Watermark from "./Components/Watermark.svelte";
 
   export let runtime: ShellRuntime;
 
@@ -32,6 +33,7 @@
   >
     <div class="primary">
       <StartMenu />
+      <Watermark />
       <PushNotification />
       <ActionCenter />
     </div>

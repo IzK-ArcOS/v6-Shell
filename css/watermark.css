@@ -1,0 +1,23 @@
+div.desktop-watermark {
+  position: fixed;
+  bottom: 65px;
+  right: 15px;
+  color: var(--fg);
+  text-shadow: 1px 1px var(--win-bg);
+  font-family: "Source Code Pro", monospace;
+  font-size: 12px;
+  pointer-events: none;
+  backdrop-filter: blur(2px);
+  z-index: 1000000000000;
+}
+
+div.tb-vertical-right div.desktop-watermark {
+  bottom: 15px;
+  right: 65px;
+}
+
+div.tb-top div.desktop-watermark,
+div.tb-vertical div.desktop-watermark {
+  bottom: 15px;
+  right: 15px;
+}
