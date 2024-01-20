@@ -8,7 +8,6 @@ div.desktop-watermark {
   font-size: 12px;
   pointer-events: none;
   backdrop-filter: blur(2px);
-  z-index: 1000000000000;
 }
 
 div.tb-vertical-right div.desktop-watermark {
