@@ -1,6 +1,10 @@
 import { TrayIcon } from "$apps/Shell/types/tray";
 import { trayIcons } from "./store";
 
+/**
+ * Creates a tray icon based on the provided data
+ * @param data The tray icon data to use
+ */
 export function createTrayIcon(data: TrayIcon) {
   if (trayExists(data.identifier)) return false;
 
@@ -11,6 +15,10 @@ export function createTrayIcon(data: TrayIcon) {
   trayIcons.set(icons);
 }
 
+/**
+ * Removes a tray icon from the system tray
+ * @param identifier the ID to delete
+ */
 export function disposeTrayIcon(identifier: string) {
   const icons = trayIcons.get();
 
@@ -21,6 +29,11 @@ export function disposeTrayIcon(identifier: string) {
   trayIcons.set(icons);
 }
 
+/**
+ * Checks if the specified ID is a valid tray icon.
+ * @param identifier the ID to verify
+ * @returns 
+ */
 export function trayExists(identifier: string): boolean {
   const icons = trayIcons.get();
 

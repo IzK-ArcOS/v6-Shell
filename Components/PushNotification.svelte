@@ -55,7 +55,6 @@
   });
 
   onDestroy(() => {
-    console.log("Unsubscribing!");
     procSub();
     unsubscribe();
   });
