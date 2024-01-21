@@ -1,36 +1,28 @@
-div.tb-vertical-right div.push-notification {
-  --offset: -400px;
-}
-
-div.shell div.push-notification {
-  --offset: 410px;
-}
-
-div.shell:not(.docked).tb- div.push-notification {
+/* div.shell:not(.docked).tb- div.push-notification {
   margin-bottom: 0;
 }
+ */
 
-div.shell:not(.vertical).docked div.push-notification {
-  --offset: 390px;
+div.tb- div.push-notification {
+  bottom: 0;
+}
+
+div.shell.docked.tb- div.push-notification {
+  bottom: 10px;
+}
+
+div.shell.docked.tb-vertical-right div.push-notification {
+  right: 10px;
+}
+
+div.shell:not(.tb-) div.push-notification {
+  bottom: 10px;
 }
 
 div.tb-vertical-right div.push-notification {
-  margin-right: 0 !important;
-  margin-left: -100px;
+  right: 0;
 }
 
 div.tb-vertical-right div.push-notification.show {
   margin-left: 0;
-}
-
-div.tb-vertical-right.docked div.push-notification {
-  --offset: -390px;
-}
-
-div.tb-vertical-right:not(.docked) div.push-notification {
-  --offset: -410px;
-}
-
-div.shell.tb-vertical.docked div.push-notification {
-  --offset: 390px;
 }

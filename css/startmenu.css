@@ -9,6 +9,7 @@
   --closed-transform: 40px;
   --docking-margin: 10px;
   width: 420px;
+  min-width: 420px;
   height: 490px;
   margin: var(--docking-margin);
   border: var(--border);

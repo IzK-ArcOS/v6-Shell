@@ -43,6 +43,7 @@
   /* justify-content: space-between; */
   pointer-events: none;
   z-index: 1;
+  position: relative;
 }
 
 #ArcShell div.shell div.secondary {

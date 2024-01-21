@@ -1,18 +1,21 @@
 @import url("./pushnotification/position.css");
 
 div.push-notification {
-  --offset: 420px;
+  --offset: 0;
 
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
   width: fit-content;
   height: fit-content;
   backdrop-filter: blur(var(--glass-blur));
   padding: 5;
-  margin: 10px 0;
   max-width: 400px;
+  min-width: 400px;
   border: var(--border);
-  border-radius: 10px;
-  transform: translateX(var(--offset));
+  border-radius: 10px; /* 
+  margin-left: auto; */
+  /* transform: translateX(var(--offset)); */
   transition: all 0.3s, transform 0s;
   margin-top: auto;
   background-color: var(--glass-bg);
