@@ -7,9 +7,9 @@
   import Shade from "./Components/Shade.svelte";
   import StartMenu from "./Components/StartMenu.svelte";
   import Taskbar from "./Components/Taskbar.svelte";
+  import Watermark from "./Components/Watermark.svelte";
   import "./css/main.css";
   import { ShellRuntime } from "./ts/runtime";
-  import Watermark from "./Components/Watermark.svelte";
 
   export let runtime: ShellRuntime;
 

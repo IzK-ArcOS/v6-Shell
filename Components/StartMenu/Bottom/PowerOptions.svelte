@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { logout } from "$state/Desktop/ts/power";
   import { spawnApp } from "$ts/apps/spawn";
 
   function search() {
