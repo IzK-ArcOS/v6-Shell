@@ -12,9 +12,15 @@
   border-radius: var(--win-border-rad);
   height: fit-content;
   overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#ArcShell div.push-notification div.notification {
+  margin-bottom: 0;
 }
 
 #ArcShell div.notification.deleting {
   transform: translateX(150px);
+  margin-bottom: -80px;
   opacity: 0;
 }
