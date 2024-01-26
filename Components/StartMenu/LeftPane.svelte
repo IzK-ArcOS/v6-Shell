@@ -12,7 +12,7 @@
   let groups = Store<CompiledAppGroupStore>({});
   let rest: string[] = [];
 
-  appLibrary.subscribe(async (v) => {
+  async function update() {
     $groups = {};
 
     await sleep();
@@ -21,7 +21,10 @@
 
     $groups = getter.groups;
     rest = getter.rest;
-  });
+  }
+
+  appLibrary.subscribe(update);
+  UserDataStore.subscribe(update);
 </script>
 
 <div class="leftpane" data-contextmenu="startmenu-applist">

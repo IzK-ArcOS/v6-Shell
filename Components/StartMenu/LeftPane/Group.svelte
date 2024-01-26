@@ -11,7 +11,7 @@
   const toggle = () => (expand = !expand);
 </script>
 
-{#if group}
+{#if group && group.apps}
   <div class="group" class:expand>
     <button class="expander" on:click={toggle}>
       <img src={FolderIcon} alt="" />
