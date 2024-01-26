@@ -5,8 +5,23 @@
   border-radius: 5px;
   border: var(--border);
   background-color: var(--win-bg);
+  padding: 10px;
 }
 
 #ArcShell div.startmenu.colored div.rightpane {
   background-color: var(--button-glass-active-bg);
+}
+
+#ArcShell div.startmenu div.rightpane button {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 5px;
+}
+#ArcShell div.startmenu div.rightpane button:hover {
+  background-color: var(--button-glass-bg);
 }
