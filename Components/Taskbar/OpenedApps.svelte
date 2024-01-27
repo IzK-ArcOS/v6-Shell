@@ -12,8 +12,6 @@
 
 <div class="opened-apps" class:centered={$UserDataStore.sh.taskbar.centered}>
   {#each [...processes] as [pid, proc]}
-    {#if !proc._disposed && proc.app && isPopulatable(proc.app)}
-      <OpenedApp {pid} app={proc.app} />
-    {/if}
+    <OpenedApp {pid} {proc} />
   {/each}
 </div>

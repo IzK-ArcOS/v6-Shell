@@ -22,6 +22,7 @@
   margin: 0;
   pointer-events: initial;
   background-color: var(--button-bg);
+  transition: all 0.3s !important;
 }
 
 #ArcShell div.taskbar.colored div.opened-apps button {
@@ -51,6 +52,10 @@
 #ArcShell div.taskbar:not(.vertical) div.opened-apps button.labels {
   width: fit-content;
   padding: 0 10px;
+}
+
+#ArcShell div.taskbar div.opened-apps button.labels.closing {
+  display: none;
 }
 
 #ArcShell div.taskbar div.opened-apps button.closing {

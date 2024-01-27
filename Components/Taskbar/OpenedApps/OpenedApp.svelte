@@ -1,13 +1,15 @@
 <script lang="ts">
   import { isPopulatable } from "$ts/apps";
+  import { Process } from "$ts/process";
   import { focusedPid } from "$ts/stores/apps";
   import { ProcessStack } from "$ts/stores/process";
   import { UserDataStore } from "$ts/stores/user";
   import { sleep } from "$ts/util";
-  import { App } from "$types/app";
 
   export let pid: number;
-  export let app: App;
+  export let proc: Process;
+
+  const { mutator } = proc;
 
   let closing = false;
   let render = true;
@@ -25,9 +27,9 @@
   }
 
   UserDataStore.subscribe(() => {
-    if (closing) return;
+    if (closing || !$mutator) return;
 
-    render = isPopulatable(app);
+    render = isPopulatable($mutator);
   });
 
   function show() {
@@ -35,17 +37,20 @@
   }
 </script>
 
-{#if render}
+{#if render && !proc._disposed && $mutator}
   <button
     class="opened-app"
     on:click={show}
     class:activated={$focusedPid == pid}
     class:labels={$UserDataStore.sh.taskbar.labels}
     class:closing
+    title={$UserDataStore.sh.taskbar.labels
+      ? proc.app.metadata.name
+      : $mutator.metadata.name}
   >
-    <img src={app.metadata.icon} alt={app.id} />
+    <img src={$mutator.metadata.icon} alt={$mutator.id} />
     {#if $UserDataStore.sh.taskbar.labels}
-      <span>{app.metadata.name}</span>
+      <span>{$mutator.metadata.name}</span>
     {/if}
   </button>
 {/if}
