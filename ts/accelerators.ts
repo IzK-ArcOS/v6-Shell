@@ -23,6 +23,19 @@ export const ShellAccelerators: (process: Process) => AppKeyCombinations = (proc
     global: true
   },
   {
+    action(proc) {
+      const opened = process.hasIdAsSubprocess("KeyboardShortcuts");
+      const elevating = isOpened("SecureContext");
+
+      if (opened || elevating) return;
+
+      spawnOverlay(getAppById("KeyboardShortcuts"), proc.pid, [], true);
+    },
+    ctrl: true,
+    key: "/",
+    global: true
+  },
+  {
     alt: true,
     key: "q",
     global: true,

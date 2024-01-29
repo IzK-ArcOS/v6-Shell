@@ -8,7 +8,7 @@ import { ShellRuntime } from "./runtime";
 
 export const ArcShell: App = {
   metadata: {
-    name: "ArcShell",
+    name: "ArcOS",
     description: "The ArcOS Shell",
     author: "The ArcOS Team",
     version: ArcOSVersion,
@@ -38,5 +38,14 @@ export const ArcShell: App = {
   },
   singleInstance: true,
   contextMenu: ShellContext,
-  loadCondition: () => !!UserDataStore.get()
+  loadCondition: () => !!UserDataStore.get(),
+  acceleratorDescriptions: {
+    "ctrl+/": "Display the shortcuts overview",
+    "alt+x": "Open the Process Manager overlay",
+    "alt+q": "Close the focused application",
+    "alt+n": "Toggle the notification center",
+    "alt+z": "Toggle the Start menu",
+    "alt+d": "Show the desktop",
+    "alt+t": "Open a new ArcTerm window",
+  }
 };
