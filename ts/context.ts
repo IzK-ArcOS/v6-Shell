@@ -3,6 +3,8 @@ import { SEP_ITEM } from "$state/Desktop/ts/store";
 import { spawnApp } from "$ts/apps";
 import { ProcessManagerIcon } from "$ts/images/apps";
 import { AppsIcon } from "$ts/images/general";
+import { ShutdownIcon } from "$ts/images/power";
+import { ProcessStack } from "$ts/stores/process";
 import { UserDataStore } from "$ts/stores/user";
 import { AppContextMenu } from "$types/app";
 
@@ -91,4 +93,29 @@ export const ShellContext: AppContextMenu = {
       },
     },
   ],
+  "opened-app": [
+    {
+      caption: "Launch Another",
+      icon: "launch",
+      action(_, data) {
+        spawnApp(data.id);
+      }
+    },
+    SEP_ITEM,
+    {
+      caption: "App Info",
+      icon: "info_outline",
+      action(_, data) {
+        console.log(data.id)
+        spawnApp("AppInfo", 0, [data.id])
+      }
+    },
+    {
+      caption: "Close",
+      image: ShutdownIcon,
+      action(_, data) {
+        ProcessStack.kill(+data.pid, true)
+      }
+    }
+  ]
 }

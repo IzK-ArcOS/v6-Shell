@@ -5,6 +5,7 @@
   import { ProcessStack } from "$ts/stores/process";
   import { UserDataStore } from "$ts/stores/user";
   import { sleep } from "$ts/util";
+  import app from "../../../../../main";
 
   export let pid: number;
   export let proc: Process;
@@ -47,6 +48,9 @@
     title={$UserDataStore.sh.taskbar.labels
       ? proc.app.metadata.name
       : $mutator.metadata.name}
+    data-contextmenu="opened-app"
+    data-id={$mutator.id}
+    data-pid={pid}
   >
     <img src={$mutator.metadata.icon} alt={$mutator.id} />
     {#if $UserDataStore.sh.taskbar.labels}
