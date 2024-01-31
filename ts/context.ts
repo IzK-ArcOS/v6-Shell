@@ -106,7 +106,6 @@ export const ShellContext: AppContextMenu = {
       caption: "App Info",
       icon: "info_outline",
       action(_, data) {
-        console.log(data.id)
         spawnApp("AppInfo", 0, [data.id])
       }
     },
