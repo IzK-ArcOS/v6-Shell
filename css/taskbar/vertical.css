@@ -8,6 +8,7 @@
   margin-left: 0;
   margin-top: auto;
   height: fit-content;
+  padding-left: 0;
 }
 
 #ArcShell div.taskbar.vertical div.system-area div.clock {
@@ -32,6 +33,7 @@
 
 #ArcShell div.taskbar.vertical div.opened-apps.centered {
   top: 0;
-  height: 100%;
-  width: fit-content;
+  height: 60vh;
+  margin: 20vh 0 !important;
+  width: fit-content !important;
 }
