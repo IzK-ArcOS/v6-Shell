@@ -3,6 +3,11 @@
   justify-content: center;
   align-items: center;
   pointer-events: none;
+  width: 60vw !important;
+  margin: 0 20vw !important;
+  overflow: scroll;
+  display: flex;
+  align-items: center;
 }
 
 #ArcShell div.taskbar:not(.vertical) div.opened-apps.centered {

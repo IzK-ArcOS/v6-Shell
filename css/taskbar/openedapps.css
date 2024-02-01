@@ -1,14 +1,18 @@
 @import url("./openedapps/centered.css");
 
 #ArcShell div.taskbar div.opened-apps {
-  display: flex;
+  display: block;
   gap: 5px;
   padding: 0 10px;
   height: 35px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  flex-grow: 1;
 }
 
 #ArcShell div.taskbar div.opened-apps button {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -20,9 +24,11 @@
   color: var(--fg);
   font-size: var(--font-size);
   margin: 0;
+  margin-right: 5px;
   pointer-events: initial;
   background-color: var(--button-bg);
   transition: all 0.3s !important;
+  min-width: fit-content;
 }
 
 #ArcShell div.taskbar.colored div.opened-apps button {

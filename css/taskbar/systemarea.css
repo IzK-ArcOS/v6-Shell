@@ -8,4 +8,12 @@
   gap: 15px;
   height: 35px;
   color: var(--fg);
+  min-width: fit-content;
+  margin-left: auto;
+  padding-left: 10px;
+}
+
+#ArcShell div.taskbar div.clock {
+  white-space: nowrap;
+  min-width: fit-content;
 }

@@ -3,11 +3,13 @@
   align-items: center;
   gap: 5px;
   width: calc(40px * 4 - 5px);
+  min-width: unset;
   overflow: hidden;
 }
 
 #ArcShell div.taskbar div.system-area div.tray.opened {
   width: fit-content;
+  min-width: fit-content;
 }
 
 #ArcShell div.taskbar div.system-area div.tray button {

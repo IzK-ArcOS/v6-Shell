@@ -18,4 +18,5 @@
   display: flex;
   /* overflow: hidden; */
   pointer-events: initial;
+  position: relative;
 }
