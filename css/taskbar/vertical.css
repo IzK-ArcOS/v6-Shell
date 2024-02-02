@@ -1,3 +1,7 @@
+#ArcShell div.taskbar.vertical button.startbutton {
+  margin-bottom: 10px !important;
+}
+
 #ArcShell div.taskbar.vertical,
 #ArcShell div.taskbar.vertical div.system-area,
 #ArcShell div.taskbar.vertical div.tray {
@@ -20,11 +24,16 @@
   flex-direction: column;
   width: 100%;
   height: fit-content;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 #ArcShell div.taskbar.vertical div.opened-apps button {
   width: 35px;
   height: 35px;
+  margin-right: 0;
+  margin-bottom: 5px;
+  display: flex;
 }
 
 #ArcShell div.taskbar.vertical div.opened-apps span {
@@ -36,4 +45,12 @@
   height: 60vh;
   margin: 20vh 0 !important;
   width: fit-content !important;
+}
+
+#ArcShell div.taskbar.vertical div.opened-apps.centered button {
+  margin-bottom: 0 !important;
+}
+
+#ArcShell div.taskbar.vertical div.opened-apps button {
+  min-height: 35px;
 }
