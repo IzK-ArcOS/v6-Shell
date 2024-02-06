@@ -4,7 +4,10 @@
   display: block;
   gap: 5px;
   padding: 0 10px;
+  padding-bottom: 0 !important;
   height: 35px;
+  min-height: 44px;
+  max-height: unset;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
