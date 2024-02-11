@@ -5,13 +5,16 @@
   gap: 5px;
   padding: 0 10px;
   padding-bottom: 0 !important;
-  height: 35px;
-  min-height: 44px;
   max-height: unset;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow: hidden;
   white-space: nowrap;
   flex-grow: 1;
+  transition: none !important;
+  overflow-x: auto;
+}
+
+#ArcShell div.taskbar div.opened-apps::-webkit-scrollbar {
+  display: none;
 }
 
 #ArcShell div.taskbar div.opened-apps button {

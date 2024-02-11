@@ -19,4 +19,5 @@
   /* overflow: hidden; */
   pointer-events: initial;
   position: relative;
+  transition: none !important;
 }

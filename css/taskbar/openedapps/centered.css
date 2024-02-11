@@ -5,13 +5,14 @@
   pointer-events: none;
   width: 60vw !important;
   margin: 0 20vw !important;
-  overflow: scroll;
+  overflow-x: scroll;
   display: flex;
   align-items: center;
 }
 
 #ArcShell div.taskbar div.opened-apps.centered button {
   min-width: 35px;
+  margin-right: 0;
 }
 
 #ArcShell div.taskbar div.opened-apps.centered button.labels {
