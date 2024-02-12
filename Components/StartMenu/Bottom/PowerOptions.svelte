@@ -1,5 +1,7 @@
 <script lang="ts">
   import { spawnApp } from "$ts/apps/spawn";
+  import { GetHelp } from "$ts/help";
+  import { HelpArticles } from "$ts/stores/articles";
 
   function search() {
     return;
@@ -15,6 +17,11 @@
 </script>
 
 <div class="options">
+  <button
+    class="material-icons-round"
+    title="Get Help"
+    on:click={() => GetHelp(HelpArticles.home)}>question_mark</button
+  >
   <button
     class="material-icons-round"
     on:click={search}

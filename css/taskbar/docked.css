@@ -4,6 +4,10 @@
   padding: 5px;
 }
 
+#ArcShell div.shell.docked div.taskbar::before {
+  border-radius: 0;
+}
+
 #ArcShell div.shell.docked.tb-vertical div.taskbar {
   border-right: var(--border);
 }
