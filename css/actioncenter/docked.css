@@ -3,6 +3,10 @@
   border-radius: 0;
 }
 
+#ArcShell div.shell.docked div.actioncenter::before {
+  border-radius: 0;
+}
+
 #ArcShell div.shell.docked.tb- div.actioncenter,
 #ArcShell div.shell.docked.tb-top div.actioncenter,
 #ArcShell div.shell.docked.tb-vertical div.actioncenter {
