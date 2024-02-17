@@ -1,7 +1,7 @@
 <script lang="ts">
   import { isPopulatable } from "$ts/apps";
   import { Process } from "$ts/process";
-  import { focusedPid } from "$ts/stores/apps";
+  import { focusedPid } from "$ts/stores/apps/focus";
   import { ProcessStack } from "$ts/stores/process";
   import { UserDataStore } from "$ts/stores/user";
   import { sleep } from "$ts/util";
@@ -45,9 +45,7 @@
     class:activated={$focusedPid == pid}
     class:labels={$UserDataStore.sh.taskbar.labels}
     class:closing
-    title={$UserDataStore.sh.taskbar.labels
-      ? proc.app.metadata.name
-      : $mutator.metadata.name}
+    title={$UserDataStore.sh.taskbar.labels ? proc.app.metadata.name : $mutator.metadata.name}
     data-contextmenu="opened-app"
     data-id={$mutator.id}
     data-pid={pid}

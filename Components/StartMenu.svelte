@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { focusedPid } from "$ts/stores/apps";
+  import { focusedPid } from "$ts/stores/apps/focus";
   import { ProcessStack } from "$ts/stores/process";
   import { UserDataStore } from "$ts/stores/user";
   import { ActionCenterOpened, StartMenuOpened } from "../ts/stores";
