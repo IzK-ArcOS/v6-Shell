@@ -35,3 +35,7 @@ div.push-notification.show {
 #ArcShell div.push-notification div.notification {
   background-color: transparent;
 }
+
+#ArcShell div.push-notification div.notification h3.title {
+  max-width: calc(100% - 30px);
+}
