@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { isPopulatable } from "$ts/apps/utils";
   import { ProcessStack } from "$ts/stores/process";
   import { UserDataStore } from "$ts/stores/user";
   import { ProcessMap } from "$types/process";

@@ -5,7 +5,6 @@
   import { ProcessStack } from "$ts/stores/process";
   import { UserDataStore } from "$ts/stores/user";
   import { sleep } from "$ts/util";
-  import app from "../../../../../main";
 
   export let pid: number;
   export let proc: Process;

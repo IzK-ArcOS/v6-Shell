@@ -27,7 +27,7 @@
       const dj = dayjs(data.timestamp || null);
       time = dj.fromNow();
       shortTime = dj.format("HH:mm");
-    })
+    }),
   );
 
   function toggleCollapse() {
@@ -63,24 +63,15 @@
             {collapsed ? shortTime : time}
           </span>
 
-          <button
-            class="delete material-icons-round"
-            on:click={deleteNotif}
-            class:collapsed
-          >
+          <button class="delete material-icons-round" on:click={deleteNotif} class:collapsed>
             delete
           </button>
-          <button
-            class="collapse material-icons-round"
-            class:collapsed
-            on:click={toggleCollapse}
-          >
+          <button class="collapse material-icons-round" class:collapsed on:click={toggleCollapse}>
             expand_more
           </button>
         {:else}
-          <button
-            class="close material-icons-round"
-            on:click={closeNotification}>arrow_forward</button
+          <button class="close material-icons-round" on:click={closeNotification}
+            >arrow_forward</button
           >
         {/if}
       </div>

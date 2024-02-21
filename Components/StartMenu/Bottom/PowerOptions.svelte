@@ -17,19 +17,12 @@
 </script>
 
 <div class="options">
-  <button
-    class="material-icons-round"
-    title="Get Help"
-    on:click={() => GetHelp(HelpArticles.home)}>question_mark</button
+  <button class="material-icons-round" title="Get Help" on:click={() => GetHelp(HelpArticles.home)}
+    >question_mark</button
   >
-  <button
-    class="material-icons-round"
-    on:click={search}
-    title="Search (Alt+Shift+S)">search</button
+  <button class="material-icons-round" on:click={search} title="Search (Alt+Shift+S)">search</button
   >
   <button class="material-icons-round" on:click={settings}>settings</button>
   <div class="sep" />
-  <button class="material-icons-round" on:click={exit}>
-    power_settings_new
-  </button>
+  <button class="material-icons-round" on:click={exit}> power_settings_new </button>
 </div>

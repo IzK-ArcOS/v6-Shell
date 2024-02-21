@@ -14,10 +14,10 @@ export const QuickSettingsStore: QuickSettings = [
       setter() {
         ActionCenterOpened.set(false); // in case settings is already opened
         spawnApp("SettingsApp");
-        return false
+        return false;
       },
       caption: "Open Settings",
-    }
+    },
   ],
   [
     {
@@ -102,19 +102,26 @@ export const QuickSettingsStore: QuickSettings = [
     {
       icon: "search",
       iconOff: "search",
-      getter() { return false; },
+      getter() {
+        return false;
+      },
       setter() {
         // TODO: PORT ARCFIND TO V6
         return false;
       },
-      caption: "Search"
+      caption: "Search",
     },
     {
       icon: "logout",
       iconOff: "logout",
-      getter() { return false; },
-      setter() { spawnApp("ExitApp"); return false; },
-      caption: "Exit"
-    }
-  ]
-]
+      getter() {
+        return false;
+      },
+      setter() {
+        spawnApp("ExitApp");
+        return false;
+      },
+      caption: "Exit",
+    },
+  ],
+];

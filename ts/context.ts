@@ -50,7 +50,7 @@ export const ShellContext: AppContextMenu = {
       image: ProcessManagerIcon,
       caption: "Processes",
       action: () => {
-        spawnApp("ProcessManager")
+        spawnApp("ProcessManager");
       },
     },
     SEP_ITEM,
@@ -99,22 +99,22 @@ export const ShellContext: AppContextMenu = {
       icon: "launch",
       action(_, data) {
         spawnApp(data.id);
-      }
+      },
     },
     SEP_ITEM,
     {
       caption: "App Info",
       icon: "info_outline",
       action(_, data) {
-        spawnApp("AppInfo", 0, [data.id])
-      }
+        spawnApp("AppInfo", 0, [data.id]);
+      },
     },
     {
       caption: "Close",
       image: ShutdownIcon,
       action(_, data) {
-        ProcessStack.kill(+data.pid, true)
-      }
-    }
-  ]
-}
+        ProcessStack.kill(+data.pid, true);
+      },
+    },
+  ],
+};

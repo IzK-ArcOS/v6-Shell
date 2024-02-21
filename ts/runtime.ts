@@ -7,6 +7,6 @@ export class ShellRuntime extends AppRuntime {
   constructor(app: App, mutator: AppMutator, process: Process) {
     super(app, mutator, process);
 
-    process.accelerator.store.push(...ShellAccelerators(process))
+    process.accelerator.store.push(...ShellAccelerators(process));
   }
 }

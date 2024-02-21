@@ -22,11 +22,6 @@
   });
 </script>
 
-<button
-  class="setting material-icons-round"
-  class:active
-  on:click={click}
-  title={setting.caption}
->
+<button class="setting material-icons-round" class:active on:click={click} title={setting.caption}>
   {active ? setting.icon : setting.iconOff}
 </button>

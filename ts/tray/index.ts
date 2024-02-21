@@ -32,7 +32,7 @@ export function disposeTrayIcon(identifier: string) {
 /**
  * Checks if the specified ID is a valid tray icon.
  * @param identifier the ID to verify
- * @returns 
+ * @returns
  */
 export function trayExists(identifier: string): boolean {
   const icons = trayIcons.get();

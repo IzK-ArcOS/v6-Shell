@@ -15,7 +15,7 @@ export const ArcShell: App = {
     appGroup: "coreApps",
     icon: Logo(),
     core: true,
-    hidden: true
+    hidden: true,
   },
   runtime: ShellRuntime,
   content: AppSvelte,
@@ -47,5 +47,5 @@ export const ArcShell: App = {
     "alt+z": "Toggle the Start menu",
     "alt+d": "Show the desktop",
     "alt+t": "Open a new ArcTerm window",
-  }
+  },
 };

@@ -9,11 +9,7 @@
   }
 </script>
 
-<button
-  class="start-button"
-  class:activated={$StartMenuOpened}
-  on:click={toggle}
->
+<button class="start-button" class:activated={$StartMenuOpened} on:click={toggle}>
   {#if $UserDataStore.sh.taskbar.accentedStart}
     <AccentedLogo width={30} height={30} />
   {:else}
