@@ -16,6 +16,8 @@
 
     const notifStore = getNotificationStore();
 
+    if (!notifStore) return;
+
     unsubscribe = notifStore.subscribe((v) => v && (count = v.size));
   });
 </script>

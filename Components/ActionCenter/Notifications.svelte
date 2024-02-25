@@ -42,7 +42,7 @@
     {#each [...store] as [id, data]}
       <NotificationSvelte {id} {data} />
     {/each}
-    {#if !store.size}
+    {#if !store.size && !errored}
       <p class="none">You have no notifications</p>
     {/if}
   {/if}
