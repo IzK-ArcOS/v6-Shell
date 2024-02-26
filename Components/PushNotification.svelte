@@ -48,7 +48,7 @@
       current = getNotifCurrentStore();
       store = getNotificationStore();
 
-      unsubscribe();
+      if (unsubscribe) unsubscribe();
       unsubscribe = null;
       subscribe();
     }
@@ -56,7 +56,7 @@
 
   onDestroy(() => {
     procSub();
-    unsubscribe();
+    if (unsubscribe) unsubscribe();
   });
 </script>
 
