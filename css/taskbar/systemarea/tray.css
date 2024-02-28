@@ -12,7 +12,8 @@
   min-width: fit-content;
 }
 
-#ArcShell div.taskbar div.system-area div.tray button {
+#ArcShell div.taskbar div.system-area div.tray > div.icon,
+#ArcShell div.taskbar div.system-area div.tray > div.icon > button.trigger {
   margin: 0;
   padding: 0;
   width: 35px;
@@ -26,24 +27,54 @@
   background-color: transparent;
 }
 
-#ArcShell div.taskbar div.system-area div.tray button:hover {
+#ArcShell div.taskbar div.system-area div.tray > div.icon > button.trigger.active {
+  background-color: var(--accent-transparent) !important;
+  opacity: 1 !important;
+}
+
+#ArcShell div.taskbar div.system-area div.tray > div.icon > button.trigger:hover {
   background-color: var(--button-glass-hover-bg);
 }
 
-#ArcShell div.taskbar div.system-area div.tray button:active {
+#ArcShell div.taskbar div.system-area div.tray > div.icon > button.trigger:active {
   background-color: var(--button-glass-active-bg);
 }
 
-#ArcShell div.taskbar div.system-area div.tray button.toggle {
+#ArcShell div.taskbar div.system-area div.tray > button.toggle {
   font-size: 24px;
   color: var(--fg);
   transition: background-color 0.3s, color 0.1s;
 }
 
-#ArcShell div.taskbar div.system-area div.tray.opened button.toggle {
+#ArcShell div.taskbar div.system-area div.tray.opened > button.toggle {
   transform: rotate(180deg);
 }
 
-#ArcShell div.taskbar div.system-area div.tray button img {
+#ArcShell div.taskbar div.system-area div.tray > div.icon > button.trigger img {
   height: 20px;
+}
+
+#ArcShell div.taskbar div.system-area div.tray > div.icon > div.popup {
+  --w: 150px;
+  --h: 200px;
+  position: absolute;
+  top: calc(0px - var(--h) - 10px);
+  width: var(--w);
+  height: var(--h);
+  background-color: var(--glass-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
+  border: var(--border);
+  border-radius: var(--win-border-rad);
+  margin-top: 20px;
+  scale: 0.9;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#ArcShell div.taskbar div.system-area div.tray > div.icon > div.popup.visible {
+  opacity: 1;
+  margin-top: 0;
+  pointer-events: initial;
+  scale: 1;
 }
