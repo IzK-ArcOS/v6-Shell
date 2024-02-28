@@ -70,6 +70,7 @@
   scale: 0.9;
   opacity: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 
 #ArcShell div.taskbar div.system-area div.tray > div.icon > div.popup.visible {
