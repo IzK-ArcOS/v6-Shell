@@ -24,6 +24,20 @@ export const ShellAccelerators: (process: Process) => AppKeyCombinations = (proc
   },
   {
     action(proc) {
+      const opened = process.hasIdAsSubprocess("ArcFind");
+      const elevating = isOpened("SecureContext");
+
+      if (opened || elevating) return;
+
+      spawnOverlay(getAppById("ArcFind"), proc.pid, [], true);
+    },
+    shift: true,
+    alt: true,
+    key: "s",
+    global: true,
+  },
+  {
+    action(proc) {
       const opened = process.hasIdAsSubprocess("KeyboardShortcuts");
       const elevating = isOpened("SecureContext");
 
