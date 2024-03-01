@@ -6,16 +6,12 @@ import { focusedPid } from "$ts/stores/apps/focus";
 import { sleep } from "$ts/util";
 import { AppKeyCombinations } from "$types/accelerator";
 import { ActionCenterOpened, StartMenuOpened } from "./stores";
+import { ShellArcFind, ShellKeyboardShortcuts, ShellProcessManager } from "./triggers";
 
 export const ShellAccelerators: (process: Process) => AppKeyCombinations = (process) => [
   {
     action(proc) {
-      const opened = process.hasIdAsSubprocess("ProcessManager");
-      const elevating = isOpened("SecureContext");
-
-      if (opened || elevating) return;
-
-      spawnOverlay(getAppById("ProcessManager"), proc.pid, [], true);
+      ShellProcessManager(proc);
     },
     shift: false,
     alt: true,
@@ -24,12 +20,7 @@ export const ShellAccelerators: (process: Process) => AppKeyCombinations = (proc
   },
   {
     action(proc) {
-      const opened = process.hasIdAsSubprocess("ArcFind");
-      const elevating = isOpened("SecureContext");
-
-      if (opened || elevating) return;
-
-      spawnOverlay(getAppById("ArcFind"), proc.pid, [], true);
+      ShellArcFind(proc);
     },
     shift: true,
     alt: true,
@@ -38,12 +29,7 @@ export const ShellAccelerators: (process: Process) => AppKeyCombinations = (proc
   },
   {
     action(proc) {
-      const opened = process.hasIdAsSubprocess("KeyboardShortcuts");
-      const elevating = isOpened("SecureContext");
-
-      if (opened || elevating) return;
-
-      spawnOverlay(getAppById("KeyboardShortcuts"), proc.pid, [], true);
+      ShellKeyboardShortcuts(proc);
     },
     ctrl: true,
     key: "/",

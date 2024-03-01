@@ -1,7 +1,9 @@
 import { QuickSettings } from "$apps/Shell/types/quicksettings";
 import { spawnApp } from "$ts/apps";
+import { ProcessStack } from "$ts/stores/process";
 import { UserDataStore } from "$ts/stores/user";
 import { ActionCenterOpened } from "../stores";
+import { ShellArcFind } from "../triggers";
 
 export const QuickSettingsStore: QuickSettings = [
   [
@@ -106,7 +108,13 @@ export const QuickSettingsStore: QuickSettings = [
         return false;
       },
       setter() {
-        // TODO: PORT ARCFIND TO V6
+        const pid = ProcessStack.getAppPids("ArcShell")[0];
+        const proc = ProcessStack.getProcess(pid);
+
+        if (!proc) return;
+
+        ShellArcFind(proc);
+
         return false;
       },
       caption: "Search",
