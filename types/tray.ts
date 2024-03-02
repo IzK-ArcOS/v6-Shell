@@ -10,5 +10,6 @@ export interface TrayIcon {
     width: number;
     height: number;
     className?: string;
+    runtime?: any;
   };
 }

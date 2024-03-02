@@ -14,6 +14,11 @@
     class:visible={$openedTray == trayIcon.identifier}
     style="--w: {trayIcon.popup.width}px; --h: {trayIcon.popup.height}px;"
   >
-    <svelte:component this={trayIcon.popup.component} icon={trayIcon} {openedTray} />
+    <svelte:component
+      this={trayIcon.popup.component}
+      icon={trayIcon}
+      {openedTray}
+      runtime={trayIcon.popup.runtime}
+    />
   </div>
 {/if}
