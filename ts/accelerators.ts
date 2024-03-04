@@ -23,8 +23,9 @@ export const ShellAccelerators: (process: Process) => AppKeyCombinations = (proc
       ShellArcFind(proc);
     },
     shift: true,
-    alt: true,
-    key: "s",
+    alt: false,
+    ctrl: true,
+    key: "f",
     global: true,
   },
   {
