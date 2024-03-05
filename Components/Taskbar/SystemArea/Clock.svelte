@@ -8,12 +8,12 @@
   onMount(() => {
     setInterval(() => {
       const tb = $UserDataStore.sh.taskbar;
-      const secs = tb.clockSecs && !tb.pos ? ":ss" : "";
-      const date = tb.clockDate && !tb.pos ? "MMM D, " : "";
-      const time = tb.clock12hr && !tb.pos ? `hh:mm${secs} A` : `HH:mm${secs}`;
+      const secs = tb.clockSecs && !tb.pos.includes("vertical") ? ":ss" : "";
+      const date = tb.clockDate && !tb.pos.includes("vertical") ? "MMM D, " : "";
+      const time = tb.clock12hr && !tb.pos.includes("vertical") ? `hh:mm${secs} A` : `HH:mm${secs}`;
 
       text = dayjs().format(`${date}${time}`);
-    }, 500);
+    });
   });
 </script>
 

@@ -89,3 +89,18 @@
   pointer-events: initial;
   scale: 1;
 }
+
+#ArcShell.tb-vertical div.taskbar div.system-area div.tray > div.icon > div.popup {
+  top: unset;
+  right: calc(0px - var(--w) - 10px);
+}
+
+#ArcShell.tb-vertical-right div.taskbar div.system-area div.tray > div.icon > div.popup {
+  top: unset;
+  left: calc(0px - var(--w) - 10px);
+}
+
+#ArcShell.tb-top div.taskbar div.system-area div.tray > div.icon > div.popup {
+  top: unset;
+  bottom: calc(0px - var(--h) - 10px);
+}
