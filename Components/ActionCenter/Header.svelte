@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Clear from "./Header/Clear.svelte";
   import Clock from "./Header/Clock.svelte";
 </script>

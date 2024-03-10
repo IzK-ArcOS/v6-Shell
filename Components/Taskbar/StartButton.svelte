@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { StartMenuOpened } from "$apps/Shell/ts/stores";
   import { Logo } from "$ts/branding";
   import { UserDataStore } from "$ts/stores/user";

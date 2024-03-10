@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import ProfilePicture from "$lib/Components/ProfilePicture.svelte";
   import { getProfilePicture } from "$ts/stores/pfp";
   import { UserDataStore, UserName } from "$ts/stores/user";

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { QuickSettingsStore } from "$apps/Shell/ts/quicksettings/store";
   import Group from "./QuickSettings/Group.svelte";
 </script>

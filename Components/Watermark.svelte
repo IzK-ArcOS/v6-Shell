@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { SafeMode } from "$state/Desktop/ts/store";
   import { ArcOSVersion } from "$ts/env";
   import { ARCOS_BUILD, ARCOS_MODE } from "$ts/metadata";

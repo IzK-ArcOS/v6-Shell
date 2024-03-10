@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { closeNotification } from "$ts/notif";
   import { ProcessStack } from "$ts/stores/process";
   import { UserDataStore } from "$ts/stores/user";

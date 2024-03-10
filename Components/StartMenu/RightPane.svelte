@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { SystemFolders } from "$apps/FileManager/ts/store";
   import Folder from "./RightPane/Folder.svelte";
 </script>
