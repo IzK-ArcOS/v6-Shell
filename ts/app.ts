@@ -41,6 +41,7 @@ export const ArcShell: App = {
   loadCondition: () => !!UserDataStore.get(),
   acceleratorDescriptions: {
     "ctrl+/": "Display the shortcuts overview",
+    "ctrl+shift+f": "Open ArcFind",
     "alt+x": "Open the Process Manager overlay",
     "alt+q": "Close the focused application",
     "alt+n": "Toggle the notification center",
