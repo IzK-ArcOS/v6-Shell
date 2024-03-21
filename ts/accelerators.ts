@@ -1,5 +1,5 @@
 import { closeContextMenu } from "$state/Desktop/ts/context";
-import { getAppById, isOpened, spawnApp, spawnOverlay } from "$ts/apps";
+import { spawnApp } from "$ts/apps";
 import { Process } from "$ts/process";
 import { GlobalDispatch } from "$ts/process/dispatch/global";
 import { focusedPid } from "$ts/stores/apps/focus";
