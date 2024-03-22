@@ -7,6 +7,7 @@
   let pfp = "";
 
   UserDataStore.subscribe((v) => {
+    if (!v) return;
     pfp = getProfilePicture(v.acc.profilePicture);
   });
 </script>
