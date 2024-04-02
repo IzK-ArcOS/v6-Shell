@@ -64,18 +64,69 @@ export const ShellContext: AppContextMenu = {
   ],
   "shell-taskbar": [
     {
-      image: ProcessManagerIcon,
-      caption: "Processes",
-      action: () => {
-        spawnApp("ProcessManager");
-      },
+      icon: "shelf_position",
+      caption: "Taskbar position",
+      subItems: [
+        {
+          caption: "Top",
+          icon: "arrow_upward",
+          isActive: () => UserDataStore.get().sh.taskbar.pos == "top",
+          action: () =>
+            UserDataStore.update((v) => {
+              v.sh.taskbar.pos = "top";
+
+              return v;
+            }),
+        },
+        {
+          caption: "Left",
+          icon: "arrow_backward",
+          isActive: () => UserDataStore.get().sh.taskbar.pos == "vertical",
+          action: () =>
+            UserDataStore.update((v) => {
+              v.sh.taskbar.pos = "vertical";
+
+              return v;
+            }),
+        },
+        {
+          caption: "Right",
+          icon: "arrow_forward",
+          isActive: () => UserDataStore.get().sh.taskbar.pos == "vertical-right",
+          action: () =>
+            UserDataStore.update((v) => {
+              v.sh.taskbar.pos = "vertical-right";
+
+              return v;
+            }),
+        },
+        {
+          caption: "Bottom",
+          icon: "arrow_downward",
+          isActive: () => UserDataStore.get().sh.taskbar.pos == "",
+          action: () =>
+            UserDataStore.update((v) => {
+              v.sh.taskbar.pos = "";
+
+              return v;
+            }),
+        },
+      ],
     },
-    SEP_ITEM,
+
     {
       icon: "settings",
       caption: "Shell settings",
       action: () => {
         OpenSettingsPage("shell");
+      },
+    },
+    SEP_ITEM,
+    {
+      image: ProcessManagerIcon,
+      caption: "Processes",
+      action: () => {
+        spawnApp("ProcessManager");
       },
     },
   ],
