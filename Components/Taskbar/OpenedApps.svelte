@@ -1,6 +1,5 @@
 <script lang="ts">
   import { ProcessStack } from "$ts/stores/process";
-  import { UserDataStore } from "$ts/stores/user";
   import { ProcessMap } from "$types/process";
   import OpenedApp from "./OpenedApps/OpenedApp.svelte";
 
@@ -9,7 +8,7 @@
   ProcessStack.processes.subscribe((v) => (processes = v));
 </script>
 
-<div class="opened-apps" class:centered={$UserDataStore.sh.taskbar.centered}>
+<div class="opened-apps">
   {#each [...processes] as [pid, proc]}
     <OpenedApp {pid} {proc} />
   {/each}
