@@ -1,3 +1,4 @@
+import { SafeMode } from "$state/Desktop/ts/store";
 import { AppRuntime } from "$ts/apps/runtime";
 import { Process } from "$ts/process";
 import { UserDataStore } from "$ts/stores/user";
@@ -20,6 +21,8 @@ export class ShellRuntime extends AppRuntime {
   }
 
   _loadUserStyle(v: UserData) {
+    if (SafeMode.get()) return;
+
     this.UserStyle.set(`<style>${v.sh.userStyle || this.defaultUserStyle}</style>`);
   }
 }
