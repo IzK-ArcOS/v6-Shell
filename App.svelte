@@ -13,6 +13,8 @@
 
   export let runtime: ShellRuntime;
 
+  const { UserStyle } = runtime;
+
   let render = false;
 
   onMount(async () => {
@@ -25,6 +27,7 @@
 </script>
 
 {#if $uds && render}
+  {@html $UserStyle}
   <Shade />
   <div
     class="shell taskbar-bounds tb-{$uds.sh.taskbar.pos} fullscreen"
