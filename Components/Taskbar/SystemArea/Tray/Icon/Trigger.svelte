@@ -21,9 +21,5 @@
   disabled={trayIcon.identifier == $openedTray}
   class:active={trayIcon.identifier == $openedTray}
 >
-  {#if trayIcon.icon}
-    <span class="material-icons-round">{trayIcon.icon}</span>
-  {:else}
-    <img src={trayIcon.image} alt={trayIcon.identifier} />
-  {/if}
+  <img src={trayIcon.image} alt={trayIcon.identifier} />
 </button>

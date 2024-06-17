@@ -1,4 +1,5 @@
 import { TrayIcon } from "$apps/Shell/types/tray";
+import { Log } from "$ts/console";
 import { trayIcons } from "./store";
 
 /**
@@ -7,6 +8,8 @@ import { trayIcons } from "./store";
  */
 export function createTrayIcon(data: TrayIcon) {
   if (trayExists(data.identifier)) return false;
+
+  Log("Shell/ts/tray", `Creating tray icon with identifier "${data.identifier}"`);
 
   const icons = trayIcons.get();
 
@@ -42,4 +45,24 @@ export function trayExists(identifier: string): boolean {
   }
 
   return false;
+}
+
+/**
+ * Changes the image of an existing tray icon
+ * @param identifier The tray icon to modify
+ * @param image The new image for the tray icon
+ */
+
+export function changeTrayIconImage(identifier: string, image: string) {
+  const icons = trayIcons.get();
+
+  for (let i = 0; i < icons.length; i++) {
+    if (icons[i].identifier != identifier) continue;
+
+    icons[i].image = image;
+
+    console.log(icons[i]);
+  }
+
+  trayIcons.set(icons);
 }

@@ -71,7 +71,7 @@
   top: calc(0px - var(--h) - 10px);
   width: var(--w);
   height: var(--h);
-  background-color: var(--glass-bg);
+  background-color: var(--win-bg);
   -webkit-backdrop-filter: blur(var(--glass-blur));
   backdrop-filter: blur(var(--glass-blur));
   border: var(--border);

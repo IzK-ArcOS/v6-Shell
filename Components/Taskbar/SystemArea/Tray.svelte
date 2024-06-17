@@ -2,7 +2,6 @@
   import { ActionCenterOpened, TrayIconOpened } from "$apps/Shell/ts/stores";
   import { trayIcons } from "$apps/Shell/ts/tray/store";
   import { TrayIcon } from "$apps/Shell/types/tray";
-  import { sleep } from "$ts/util";
   import { Store } from "$ts/writable";
   import Icon from "./Tray/Icon.svelte";
 
@@ -22,24 +21,16 @@
     if (!v) openedTray.set(null);
   });
 
-  trayIcons.subscribe(async (v) => {
-    if (!v) return;
-
-    icons = [];
-    await sleep(0);
-    icons = v;
-  });
-
   function toggle() {
     opened = !opened;
   }
 </script>
 
 <div class="tray" class:opened={icons.length > 3 ? opened : true}>
-  {#if icons.length > 4}
+  {#if $trayIcons.length > 4}
     <button class="toggle material-icons-round" on:click={toggle}> chevron_left </button>
   {/if}
-  {#each icons as trayIcon}
+  {#each $trayIcons as trayIcon}
     <Icon {trayIcon} {openedTray} />
   {/each}
 </div>
