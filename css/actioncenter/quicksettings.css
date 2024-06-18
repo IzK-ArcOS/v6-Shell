@@ -6,8 +6,23 @@
 
 #ArcShell div.actioncenter div.quick-settings div.group {
   display: flex;
-  overflow: hidden;
-  border-radius: 6px;
+  border-radius: var(--button-border-rad);
+  background-color: var(--button-glass-bg);
+}
+
+#ArcShell div.actioncenter div.quick-settings div.group button:first-child {
+  border-top-left-radius: var(--button-border-rad);
+  border-bottom-left-radius: var(--button-border-rad);
+}
+
+#ArcShell div.actioncenter div.quick-settings div.group button:last-child {
+  border-top-right-radius: var(--button-border-rad);
+  border-bottom-right-radius: var(--button-border-rad);
+}
+
+#ArcShell div.actioncenter div.quick-settings div.group:hover button:not(:hover) {
+  filter: brightness(80%);
+  z-index: 0;
 }
 
 #ArcShell div.actioncenter div.quick-settings div.group button {
@@ -20,28 +35,32 @@
   font-size: 20px;
   justify-content: center;
   align-items: center;
-  background-color: var(--button-glass-bg);
+  background-color: transparent;
+  z-index: 1000;
 }
 
 #ArcShell div.actioncenter div.quick-settings div.group button:hover {
-  background-color: var(--button-glass-hover-bg);
+  scale: 1.2;
+  border-radius: var(--button-border-rad);
+  background-color: var(--button-bg);
 }
 
 #ArcShell div.actioncenter div.quick-settings div.group button:active {
-  background-color: var(--button-glass-active-bg);
   transform: unset;
   opacity: 1;
+  scale: 1.1;
 }
 
 #ArcShell div.actioncenter div.quick-settings div.group button.active {
   background-color: var(--accent);
   color: var(--accent-dark);
+  z-index: 50;
 }
 
 #ArcShell div.actioncenter div.quick-settings div.group button.active:hover {
-  background-color: var(--accent-lighter);
+  color: var(--accent-dark);
 }
 
 #ArcShell div.actioncenter div.quick-settings div.group button.active:active {
-  background-color: var(--accent-transparent);
+  background-color: var(--accent);
 }

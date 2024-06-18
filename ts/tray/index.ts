@@ -60,8 +60,6 @@ export function changeTrayIconImage(identifier: string, image: string) {
     if (icons[i].identifier != identifier) continue;
 
     icons[i].image = image;
-
-    console.log(icons[i]);
   }
 
   trayIcons.set(icons);

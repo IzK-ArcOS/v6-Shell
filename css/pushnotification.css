@@ -13,7 +13,7 @@ div.push-notification {
   max-width: 400px;
   min-width: 400px;
   border: var(--border);
-  border-radius: 10px; /* 
+  border-radius: var(--win-border-rad); /* 
   margin-left: auto; */
   /* transform: translateX(var(--offset)); */
   transition: all 0.3s, transform 0s;

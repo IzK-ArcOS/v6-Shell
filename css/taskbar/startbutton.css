@@ -7,7 +7,7 @@
   height: 35px;
   min-width: 35px;
   min-height: 35px;
-  border-radius: 7px;
+  border-radius: var(--button-border-rad);
   border: none;
   margin: 0;
   padding: 0;

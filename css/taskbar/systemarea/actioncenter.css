@@ -5,7 +5,7 @@
   width: 35px;
   height: 35px;
   border: none;
-  border-radius: 7px;
+  border-radius: var(--button-border-rad);
   background-color: var(--button-glass-bg);
   color: var(--fg);
   font-size: 20px;

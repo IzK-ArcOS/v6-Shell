@@ -24,7 +24,7 @@
   gap: 10px;
   width: 35px;
   height: 35px;
-  border-radius: 7px;
+  border-radius: var(--button-border-rad);
   border: none;
   padding: 0;
   color: var(--fg);

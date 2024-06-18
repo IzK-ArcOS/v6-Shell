@@ -23,6 +23,12 @@ export class ShellRuntime extends AppRuntime {
   _loadUserStyle(v: UserData) {
     if (SafeMode.get()) return;
 
+    if (!v.sh.enableUserStyle) {
+      this.UserStyle.set("<style></style>");
+
+      return;
+    }
+
     this.UserStyle.set(`<style>${v.sh.userStyle || this.defaultUserStyle}</style>`);
   }
 }

@@ -35,21 +35,19 @@
 
   onMount(() => {
     GlobalDispatch.subscribe("change-tray-image", (data: [string, string]) => {
-      console.log(data);
-      if (!Array.isArray(data)) return;
-      if (data.length !== 2) return;
+      if (!Array.isArray(data) || data.length !== 2) return;
 
       const identifier = data[0];
       const imageId = data[1];
       const image = getAllImages()[imageId] || QuestionIcon;
 
-      console.log(identifier, imageId, image);
-
       changeTrayIconImage(identifier, image);
     });
+
     GlobalDispatch.subscribe("notify-tray-icons", () => {
       const icons = $trayIcons.map((i) => i.identifier).join("<br/>");
       let text = `<code>${icons}</code>`;
+
       createErrorDialog(
         {
           title: "notify-tray-icons",
