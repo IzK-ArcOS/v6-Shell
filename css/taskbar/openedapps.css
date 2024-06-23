@@ -50,17 +50,6 @@
   background-color: var(--button-active-bg);
 }
 
-#ArcShell div.taskbar div.opened-apps button.activated::after {
-  content: "";
-  position: absolute;
-  bottom: 1px;
-  left: 10px;
-  width: calc(100% - 20px);
-  height: 3px;
-  border-radius: 10px;
-  background-color: var(--accent);
-}
-
 #ArcShell div.taskbar.colored div.opened-apps button.activated {
   background-color: var(--button-glass-active-bg);
 }
